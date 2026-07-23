@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+/npm-debug.log*
+/yarn-error.log*
+
+# Next.js build outputs
+.next/
+out/
+
+# Production/Distribution builds
+dist/
+build/
+
+# Databases and sqlite storage files
+*.db
+*.db-journal
+*.sqlite
+database/*.db
+apps/web/prisma/*.db
+
+# Local environment variables/secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# User uploads/documents folders
+/uploads/
+/temp/
+/tmp/

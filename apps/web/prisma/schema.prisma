@@ -1,0 +1,99 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Clause {
+  id                    Int       @id @default(autoincrement())
+  clauseId              String    @unique
+  title                 String
+  description           String
+  objective             String?
+  mandatory             Boolean   @default(true)
+  responsibleRole       String?
+  reviewFrequency       String?
+  status                String    @default("not_started")
+  completionPercentage  Float     @default(0.0)
+  controls              Control[]
+}
+
+model Control {
+  id                        Int      @id @default(autoincrement())
+  controlId                 String   @unique
+  clauseDbId                Int?
+  clause                    Clause?  @relation(fields: [clauseDbId], references: [id])
+  title                     String
+  category                  String
+  description               String
+  objective                 String?
+  purpose                   String?
+  applicability             String   @default("All organizations")
+  mandatory                 Boolean  @default(true)
+  implementationGuidance    String?
+  maturityLevel             String   @default("Initial")
+  dependencies              String   @default("[]") // JSON stringified array
+  relatedControls           String   @default("[]") // JSON stringified array
+  relatedRisks              String   @default("[]") // JSON stringified array
+  relatedAssets             String   @default("[]") // JSON stringified array
+  responsibleRole           String?
+  supportingTeams           String   @default("[]") // JSON stringified array
+  reviewFrequency           String?
+  retentionPeriod           String?
+  status                    String   @default("not_started")
+  completionPercentage      Float    @default(0.0)
+  requiredPolicies          String   @default("[]") // JSON stringified array
+  requiredProcedures        String   @default("[]") // JSON stringified array
+  requiredStandards         String   @default("[]") // JSON stringified array
+  requiredSops              String   @default("[]") // JSON stringified array
+  requiredGuidelines        String   @default("[]") // JSON stringified array
+  requiredRegisters         String   @default("[]") // JSON stringified array
+  requiredRecords           String   @default("[]") // JSON stringified array
+  requiredForms             String   @default("[]") // JSON stringified array
+  requiredLogs              String   @default("[]") // JSON stringified array
+  requiredTechnicalConfigs  String   @default("[]") // JSON stringified array
+  requiredTemplates         String   @default("[]") // JSON stringified array
+  requiredTrainingMaterials String   @default("[]") // JSON stringified array
+  requiredAgreements        String   @default("[]") // JSON stringified array
+  requiredPlans             String   @default("[]") // JSON stringified array
+  checklists                String   @default("[]") // JSON stringified array
+  evidenceRequirements      String   @default("[]") // JSON stringified array
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+}
+
+model Document {
+  id          Int      @id @default(autoincrement())
+  docType     String
+  title       String
+  description String?
+  controlId   String?
+  status      String   @default("draft")
+  filePath    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Risk {
+  id              Int      @id @default(autoincrement())
+  riskId          String   @unique
+  title           String
+  description     String?
+  category        String?
+  likelihood      Int      @default(3)
+  impact          Int      @default(3)
+  riskScore       Float    @default(9.0)
+  riskLevel       String   @default("Medium")
+  treatment       String   @default("mitigate")
+  status          String   @default("open")
+  owner           String?
+  relatedControls String   @default("[]") // JSON stringified array
+  metadata        String   @default("{}") // JSON stringified extra columns from Excel
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
