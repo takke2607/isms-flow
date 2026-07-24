@@ -20,6 +20,7 @@ interface EvidenceItem {
   title: string
   description: string
   status: 'collected' | 'missing'
+  controlStatus?: string
   linkedDocs: MappedDoc[]
 }
 
@@ -86,6 +87,36 @@ export default function EvidenceClient({ initialEvidence }: EvidenceClientProps)
     }
   }
 
+  const handleExportExcel = () => {
+    const headers = ['Sr. No', 'Annex Controls', 'Document Name / Evidence Required', 'Status']
+    const rows = filtered.map((item, idx) => {
+      let statusStr = 'Pending'
+      if (item.linkedDocs.length > 0 || item.controlStatus === 'implemented') {
+        statusStr = 'Completed'
+      } else if (item.controlStatus === 'in_progress') {
+        statusStr = 'In Progress'
+      }
+
+      return [
+        idx + 1,
+        `"${item.controlId} - ${item.controlTitle.replace(/"/g, '""')}"`,
+        `"${item.title.replace(/"/g, '""')} (${item.evidenceType}): ${item.description.replace(/"/g, '""')}"`,
+        statusStr
+      ]
+    })
+
+    const csvContent = "\uFEFF" + [headers.join(','), ...rows.map(e => e.join(','))].join('\n')
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.setAttribute('href', url)
+    link.setAttribute('download', 'isms_required_documents_tracker.csv')
+    link.style.visibility = 'hidden'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <main className="page-body">
       <div className="page-header">
@@ -142,6 +173,13 @@ export default function EvidenceClient({ initialEvidence }: EvidenceClientProps)
           <option value="collected">Evidence Linked</option>
           <option value="missing">Missing Evidence</option>
         </select>
+        <button onClick={handleExportExcel} style={{
+          padding: '6px 12px', fontSize: '11px', fontFamily: 'Share Tech Mono', border: '1.5px solid #000',
+          background: 'var(--color-accent)', color: '#000', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px',
+          fontWeight: 'bold', marginLeft: 'auto'
+        }}>
+          📥 Export Excel Tracker
+        </button>
       </div>
 
       {/* Evidence Controls List */}

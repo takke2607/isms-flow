@@ -44,6 +44,7 @@ export default async function EvidencePage() {
       title: requirement.title,
       description: requirement.description,
       status,
+      controlStatus: cl.status || 'not_started',
       linkedDocs: linkedDocs.map(d => ({
         id: d.id,
         title: d.title,
@@ -70,6 +71,7 @@ export default async function EvidencePage() {
       title: requirement.title,
       description: requirement.description,
       status,
+      controlStatus: c.status || 'not_started',
       linkedDocs: linkedDocs.map(d => ({
         id: d.id,
         title: d.title,
