@@ -189,11 +189,6 @@ export default function LoginPage() {
             Authenticate Session
           </button>
         </form>
-
-        <div style={{ marginTop: '24px', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '16px', fontSize: '10px', color: '#9ca3af', textAlign: 'center', lineHeight: '1.4' }}>
-          <div>Default Global Admin: <span style={{ color: '#fff' }}>admin</span> / <span style={{ color: '#fff' }}>admin@123</span></div>
-          <div style={{ marginTop: '4px' }}>Default Monitor: <span style={{ color: '#fff' }}>monitor</span> / <span style={{ color: '#fff' }}>password</span></div>
-        </div>
       </div>
     </div>
   )
