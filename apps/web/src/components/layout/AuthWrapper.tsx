@@ -26,7 +26,7 @@ export function AuthWrapper({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const checkSession = () => {
-      const saved = localStorage.getItem('isms_user_session')
+      const saved = sessionStorage.getItem('isms_user_session')
       if (saved) {
         try {
           const parsed = JSON.parse(saved) as UserSession
@@ -35,7 +35,7 @@ export function AuthWrapper({ children }: { children: React.ReactNode }) {
             router.push('/')
           }
         } catch (e) {
-          localStorage.removeItem('isms_user_session')
+          sessionStorage.removeItem('isms_user_session')
           if (pathname !== '/login') {
             router.push('/login')
           }
@@ -55,7 +55,7 @@ export function AuthWrapper({ children }: { children: React.ReactNode }) {
   }, [pathname, router])
 
   const logout = () => {
-    localStorage.removeItem('isms_user_session')
+    sessionStorage.removeItem('isms_user_session')
     setSession(null)
     router.push('/login')
   }

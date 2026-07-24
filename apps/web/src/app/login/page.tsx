@@ -49,7 +49,7 @@ export default function LoginPage() {
       role: matchedUser.role
     }
 
-    localStorage.setItem('isms_user_session', JSON.stringify(session))
+    sessionStorage.setItem('isms_user_session', JSON.stringify(session))
     
     // Trigger custom header refresh event
     window.dispatchEvent(new Event('isms_refresh_header'))

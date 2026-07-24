@@ -132,7 +132,7 @@ export default function SettingsPage() {
       email: profileEmail,
       role: currentUsers[index].role
     }
-    localStorage.setItem('isms_user_session', JSON.stringify(updatedSession))
+    sessionStorage.setItem('isms_user_session', JSON.stringify(updatedSession))
 
     setProfileSuccess('Profile updated successfully!')
     setProfilePassword('')
