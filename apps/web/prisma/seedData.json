@@ -1,0 +1,4683 @@
+{
+  "clauses": [
+    {
+      "clause_id": "10",
+      "title": "Improvement",
+      "description": "Address nonconformities and corrective actions, and continually improve the ISMS.",
+      "objective": "Continually improve the suitability, adequacy, and effectiveness of the ISMS.",
+      "mandatory": true,
+      "responsible_role": "CISO / Quality Manager",
+      "review_frequency": "Ongoing"
+    },
+    {
+      "clause_id": "4",
+      "title": "Context of the Organization",
+      "description": "Understanding the organization and its context, the needs and expectations of interested parties, and determining the scope of the ISMS.",
+      "objective": "Establish the organizational context and scope of the ISMS.",
+      "mandatory": true,
+      "responsible_role": "CISO / Top Management",
+      "review_frequency": "Annual"
+    },
+    {
+      "clause_id": "5",
+      "title": "Leadership",
+      "description": "Top management must demonstrate leadership and commitment to the ISMS, establish information security policy, and assign roles and responsibilities.",
+      "objective": "Ensure top management commitment to information security.",
+      "mandatory": true,
+      "responsible_role": "CEO / Top Management",
+      "review_frequency": "Annual"
+    },
+    {
+      "clause_id": "6",
+      "title": "Planning",
+      "description": "Address risks and opportunities, set information security objectives, and plan actions to achieve them.",
+      "objective": "Ensure ISMS achieves its intended outcomes and prevents/reduces undesired effects.",
+      "mandatory": true,
+      "responsible_role": "CISO / Risk Manager",
+      "review_frequency": "Annual"
+    },
+    {
+      "clause_id": "7",
+      "title": "Support",
+      "description": "Provide resources, ensure competence, awareness, communication, and maintain documented information.",
+      "objective": "Ensure the ISMS is supported with adequate resources and documented information.",
+      "mandatory": true,
+      "responsible_role": "CISO / HR Manager",
+      "review_frequency": "Annual"
+    },
+    {
+      "clause_id": "8",
+      "title": "Operation",
+      "description": "Plan, implement, and control processes to meet information security requirements.",
+      "objective": "Implement and operationalize all ISMS processes effectively.",
+      "mandatory": true,
+      "responsible_role": "IT Manager / CISO",
+      "review_frequency": "Quarterly"
+    },
+    {
+      "clause_id": "9",
+      "title": "Performance Evaluation",
+      "description": "Monitor, measure, analyze, evaluate, conduct internal audits, and management reviews.",
+      "objective": "Evaluate ISMS performance and effectiveness.",
+      "mandatory": true,
+      "responsible_role": "Internal Audit / CISO",
+      "review_frequency": "Annual"
+    }
+  ],
+  "controls": [
+    {
+      "control_id": "5.1",
+      "title": "Policies for information security",
+      "category": "Organizational",
+      "description": "Information security policy and topic-specific policies shall be defined, approved by management, published, communicated to, and acknowledged by relevant personnel.",
+      "objective": "Provide management direction and support for information security in accordance with business requirements.",
+      "purpose": "Establish the foundation of information security governance through documented policies.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Develop an overarching Information Security Policy approved by top management. Create topic-specific policies (e.g., access control, acceptable use, mobile devices). Communicate to all staff. Review annually or upon significant changes.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Information Security Policy",
+        "Acceptable Use Policy"
+      ],
+      "required_procedures": [
+        "Policy Review Procedure",
+        "Policy Communication Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Policy Approval Records",
+        "Staff Acknowledgment Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Policy approved by management",
+        "Policy communicated to all staff",
+        "Annual review scheduled"
+      ],
+      "evidence_requirements": [
+        "Signed policy document",
+        "Distribution email/records",
+        "Review meeting minutes"
+      ]
+    },
+    {
+      "control_id": "5.10",
+      "title": "Acceptable use of information and other associated assets",
+      "category": "Organizational",
+      "description": "Rules for the acceptable use of, and procedures for handling, information and other associated assets shall be identified, documented, and implemented.",
+      "objective": "Ensure information and assets are used appropriately by all personnel.",
+      "purpose": "Define boundaries for acceptable use to prevent misuse.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Draft an Acceptable Use Policy covering email, internet, cloud services, BYOD, and company devices. Require staff to acknowledge the policy on hire and annually. Monitor compliance.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / HR",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Acceptable Use Policy"
+      ],
+      "required_procedures": [
+        "Policy Acknowledgment Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Signed AUP Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "AUP documented",
+        "All staff have signed",
+        "Monitored regularly"
+      ],
+      "evidence_requirements": [
+        "Signed AUP records",
+        "Monitoring reports"
+      ]
+    },
+    {
+      "control_id": "5.11",
+      "title": "Return of assets",
+      "category": "Organizational",
+      "description": "Personnel and other interested parties shall return all organizational assets upon change or termination of employment.",
+      "objective": "Ensure organizational assets are returned and access revoked when individuals leave.",
+      "purpose": "Prevent unauthorized use of organizational assets post-employment.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement an offboarding checklist requiring return of all devices, credentials, and access cards. HR to coordinate with IT. Document asset return in the exit process.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "HR / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Per event",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Asset Return Policy"
+      ],
+      "required_procedures": [
+        "Offboarding Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Asset Return Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Offboarding checklist exists",
+        "Asset return tracked",
+        "Access revoked on departure"
+      ],
+      "evidence_requirements": [
+        "Completed offboarding checklists",
+        "Asset return receipts"
+      ]
+    },
+    {
+      "control_id": "5.12",
+      "title": "Classification of information",
+      "category": "Organizational",
+      "description": "Information shall be classified according to the information security needs of the organization.",
+      "objective": "Ensure information receives appropriate level of protection.",
+      "purpose": "Enable consistent application of security controls based on information sensitivity.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define classification levels (e.g., Public, Internal, Confidential, Restricted). Document criteria for each. Train staff. Apply to all new information assets.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Data Owner / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Information Classification Policy"
+      ],
+      "required_procedures": [
+        "Classification Procedure"
+      ],
+      "required_standards": [
+        "Classification Scheme Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Classification scheme defined",
+        "Criteria documented",
+        "Training delivered"
+      ],
+      "evidence_requirements": [
+        "Classification scheme document",
+        "Training completion records"
+      ]
+    },
+    {
+      "control_id": "5.13",
+      "title": "Labelling of information",
+      "category": "Organizational",
+      "description": "An appropriate set of procedures for information labelling shall be developed and implemented.",
+      "objective": "Ensure information classification is communicated clearly on all information assets.",
+      "purpose": "Enable personnel to handle information according to its classification.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define labelling formats for each classification level. Apply to documents, emails, databases. Implement automatic labelling tools where feasible. Train staff on correct labelling.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Data Owner / IT",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Information Labelling Policy"
+      ],
+      "required_procedures": [
+        "Labelling Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Labelling scheme defined",
+        "Applied to all assets",
+        "Tools configured"
+      ],
+      "evidence_requirements": [
+        "Labelled document samples",
+        "Tool configuration records"
+      ]
+    },
+    {
+      "control_id": "5.14",
+      "title": "Information transfer",
+      "category": "Organizational",
+      "description": "Information transfer rules, procedures, or agreements shall be in place for all types of transfer facilities.",
+      "objective": "Protect information transferred within and outside the organization.",
+      "purpose": "Prevent unauthorized disclosure or loss of information during transfer.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define rules for email, file transfer, physical media, and cloud sharing. Implement data loss prevention (DLP). Require encryption for sensitive data. Use NDAs for external transfers.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Information Transfer Policy"
+      ],
+      "required_procedures": [
+        "Secure Transfer Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Transfer rules defined",
+        "Encryption in place",
+        "NDAs signed for external parties"
+      ],
+      "evidence_requirements": [
+        "Transfer policy",
+        "DLP configuration",
+        "Signed NDAs"
+      ]
+    },
+    {
+      "control_id": "5.15",
+      "title": "Access control",
+      "category": "Organizational",
+      "description": "Rules to control physical and logical access to information and other associated assets shall be established.",
+      "objective": "Prevent unauthorized access to information and systems.",
+      "purpose": "Protect organizational assets by ensuring only authorized access is granted.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Develop an Access Control Policy. Implement role-based access control (RBAC). Review access rights quarterly. Apply least privilege principle. Log all access.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Access Control Policy"
+      ],
+      "required_procedures": [
+        "Access Provisioning Procedure",
+        "Access Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Access Control Records",
+        "Access Review Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Access policy defined",
+        "RBAC implemented",
+        "Quarterly reviews scheduled"
+      ],
+      "evidence_requirements": [
+        "Access control policy",
+        "Access review reports",
+        "Access logs"
+      ]
+    },
+    {
+      "control_id": "5.16",
+      "title": "Identity management",
+      "category": "Organizational",
+      "description": "The full lifecycle of identities shall be managed.",
+      "objective": "Ensure identities are created, maintained, and deleted appropriately.",
+      "purpose": "Maintain accurate and current identity information to support access control.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement identity lifecycle management (provision, modify, deprovision). Use unique identifiers. Integrate with HR processes. Review dormant accounts monthly.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / HR",
+      "supporting_teams": [],
+      "review_frequency": "Monthly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Identity Management Policy"
+      ],
+      "required_procedures": [
+        "Identity Lifecycle Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Identity Registry",
+        "Deprovisioning Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "All identities tracked",
+        "Lifecycle process defined",
+        "Dormant accounts reviewed"
+      ],
+      "evidence_requirements": [
+        "Identity registry",
+        "Deprovisioning records"
+      ]
+    },
+    {
+      "control_id": "5.17",
+      "title": "Authentication information",
+      "category": "Organizational",
+      "description": "Allocation and management of authentication information shall be controlled by a management process.",
+      "objective": "Ensure authentication information is protected and managed securely.",
+      "purpose": "Prevent unauthorized access through compromised credentials.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement a password policy (minimum length, complexity, rotation). Use MFA where possible. Store passwords in hashed form. Provide secure initial password distribution.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Password Policy",
+        "MFA Policy"
+      ],
+      "required_procedures": [
+        "Credential Management Procedure"
+      ],
+      "required_standards": [
+        "Password Complexity Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Password policy enforced",
+        "MFA deployed",
+        "Passwords stored securely"
+      ],
+      "evidence_requirements": [
+        "Password policy config",
+        "MFA deployment records"
+      ]
+    },
+    {
+      "control_id": "5.18",
+      "title": "Access rights",
+      "category": "Organizational",
+      "description": "Access rights to information and other associated assets shall be provisioned, reviewed, modified, and removed.",
+      "objective": "Ensure access rights are appropriate and current at all times.",
+      "purpose": "Minimize risk from excessive, outdated, or inappropriate access rights.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement formal access request/approval process. Conduct quarterly access reviews. Remove access immediately on termination. Maintain access logs.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Data Owner",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Access Rights Policy"
+      ],
+      "required_procedures": [
+        "Access Request Procedure",
+        "Access Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Access Review Reports",
+        "Access Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Access request process in place",
+        "Quarterly reviews conducted",
+        "Termination access removal verified"
+      ],
+      "evidence_requirements": [
+        "Access request forms",
+        "Review reports",
+        "Termination records"
+      ]
+    },
+    {
+      "control_id": "5.19",
+      "title": "Information security in supplier relationships",
+      "category": "Organizational",
+      "description": "Processes and procedures shall be defined and implemented to manage information security risks associated with the use of supplier's products or services.",
+      "objective": "Protect organizational information accessed or processed by suppliers.",
+      "purpose": "Manage supply chain information security risks.",
+      "applicability": "All organizations using third-party suppliers",
+      "mandatory": true,
+      "implementation_guidance": "Define supplier security requirements. Include security clauses in contracts. Conduct supplier security assessments. Monitor supplier compliance regularly.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Procurement / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "Contract + 3 years",
+      "required_policies": [
+        "Supplier Security Policy"
+      ],
+      "required_procedures": [
+        "Supplier Onboarding Procedure",
+        "Supplier Risk Assessment Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Supplier Assessments",
+        "Supplier Register"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Supplier policy defined",
+        "All suppliers assessed",
+        "Contracts include security clauses"
+      ],
+      "evidence_requirements": [
+        "Supplier assessment reports",
+        "Signed contracts with security clauses"
+      ]
+    },
+    {
+      "control_id": "5.2",
+      "title": "Information security roles and responsibilities",
+      "category": "Organizational",
+      "description": "Information security roles and responsibilities shall be defined and allocated according to the needs of the organization.",
+      "objective": "Ensure clear ownership and accountability for information security.",
+      "purpose": "Define who is responsible for what in the ISMS.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define roles such as CISO, Data Owner, System Owner, Security Champion. Document in job descriptions. Assign responsibilities matrix (RACI). Communicate to all staff.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / HR",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Information Security Roles Policy"
+      ],
+      "required_procedures": [
+        "Role Assignment Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "RACI Matrix",
+        "Job Descriptions"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "RACI matrix documented",
+        "Roles communicated",
+        "Job descriptions updated"
+      ],
+      "evidence_requirements": [
+        "RACI matrix",
+        "Org chart with security roles",
+        "Job descriptions"
+      ]
+    },
+    {
+      "control_id": "5.20",
+      "title": "Addressing information security within supplier agreements",
+      "category": "Organizational",
+      "description": "Relevant information security requirements shall be established and agreed with each supplier based on the type of supplier relationship.",
+      "objective": "Ensure suppliers are contractually bound to meet security requirements.",
+      "purpose": "Formalize supplier security obligations through binding agreements.",
+      "applicability": "All organizations using third-party suppliers",
+      "mandatory": true,
+      "implementation_guidance": "Include standard security clauses in all supplier contracts. Define SLAs for security incidents. Require right-to-audit clauses. Ensure sub-processor controls.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Legal / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Per contract",
+      "retention_period": "Contract + 5 years",
+      "required_policies": [
+        "Supplier Agreement Security Policy"
+      ],
+      "required_procedures": [
+        "Contract Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Signed Agreements"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Security clauses in all contracts",
+        "SLAs defined",
+        "Audit rights included"
+      ],
+      "evidence_requirements": [
+        "Contract samples with security clauses"
+      ]
+    },
+    {
+      "control_id": "5.21",
+      "title": "Managing information security in the ICT supply chain",
+      "category": "Organizational",
+      "description": "Processes and procedures shall be defined and implemented to manage information security risks associated with the ICT products and services supply chain.",
+      "objective": "Manage security risks in hardware and software supply chains.",
+      "purpose": "Address risks from compromised hardware/software components in the supply chain.",
+      "applicability": "Organizations using ICT products/services",
+      "mandatory": true,
+      "implementation_guidance": "Verify integrity of ICT components. Assess suppliers' security practices. Monitor for supply chain attacks. Implement SBOM (Software Bill of Materials) practices.",
+      "maturity_level": "Advanced",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "ICT Supply Chain Security Policy"
+      ],
+      "required_procedures": [
+        "Supply Chain Risk Assessment Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "SBOM Records",
+        "Supply Chain Risk Assessments"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Supply chain risks assessed",
+        "Integrity checks in place",
+        "SBOM maintained"
+      ],
+      "evidence_requirements": [
+        "Supply chain risk assessment",
+        "SBOM documentation"
+      ]
+    },
+    {
+      "control_id": "5.22",
+      "title": "Monitoring, review, and change management of supplier services",
+      "category": "Organizational",
+      "description": "The organization shall regularly monitor, review, and manage changes to supplier service provisions.",
+      "objective": "Ensure suppliers maintain agreed security standards over time.",
+      "purpose": "Continuously validate supplier performance against security requirements.",
+      "applicability": "All organizations using third-party suppliers",
+      "mandatory": true,
+      "implementation_guidance": "Conduct periodic supplier performance reviews. Include security metrics. Review contracts upon major changes. Track incidents involving suppliers.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Procurement / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Supplier Monitoring Policy"
+      ],
+      "required_procedures": [
+        "Supplier Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Supplier Review Reports",
+        "Incident Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Annual reviews conducted",
+        "Security metrics tracked",
+        "Issues escalated"
+      ],
+      "evidence_requirements": [
+        "Supplier review reports",
+        "Performance scorecards"
+      ]
+    },
+    {
+      "control_id": "5.23",
+      "title": "Information security for use of cloud services",
+      "category": "Organizational",
+      "description": "Processes for acquisition, use, management, and exit from cloud services shall be established in accordance with the organization's information security requirements.",
+      "objective": "Securely manage cloud service usage throughout its lifecycle.",
+      "purpose": "Govern cloud adoption with appropriate security controls.",
+      "applicability": "Organizations using cloud services",
+      "mandatory": true,
+      "implementation_guidance": "Develop a Cloud Security Policy. Assess cloud providers before adoption. Define shared responsibility model. Plan for cloud exit/portability. Monitor cloud environments.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Cloud Security Policy"
+      ],
+      "required_procedures": [
+        "Cloud Adoption Procedure",
+        "Cloud Exit Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Cloud Provider Assessments",
+        "Data Processing Agreements"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Cloud policy defined",
+        "Providers assessed",
+        "Shared responsibility documented",
+        "Exit plan exists"
+      ],
+      "evidence_requirements": [
+        "Cloud security policy",
+        "Provider assessments",
+        "Signed DPAs"
+      ]
+    },
+    {
+      "control_id": "5.24",
+      "title": "Information security incident management planning and preparation",
+      "category": "Organizational",
+      "description": "The organization shall plan and prepare for managing information security incidents.",
+      "objective": "Ensure rapid, effective response to information security incidents.",
+      "purpose": "Establish a structured incident response capability.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Develop an Incident Response Plan. Define incident categories and severity levels. Establish an Incident Response Team (IRT). Test the plan at least annually.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / Incident Response Team",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Incident Management Policy"
+      ],
+      "required_procedures": [
+        "Incident Response Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "IRT Contact List",
+        "Incident Log"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "IRP documented",
+        "IRT formed",
+        "Annual test completed"
+      ],
+      "evidence_requirements": [
+        "Incident response plan",
+        "Test results",
+        "IRT assignments"
+      ]
+    },
+    {
+      "control_id": "5.25",
+      "title": "Assessment and decision on information security events",
+      "category": "Organizational",
+      "description": "The organization shall assess information security events and decide if they are to be categorized as information security incidents.",
+      "objective": "Ensure consistent evaluation and classification of security events.",
+      "purpose": "Enable appropriate response by correctly identifying incidents.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define criteria for classifying events as incidents. Use a triage process. Train first responders on classification. Document all classification decisions.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Incident Response Team",
+      "supporting_teams": [],
+      "review_frequency": "Per event",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Incident Classification Policy"
+      ],
+      "required_procedures": [
+        "Event Triage Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Event Classification Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Classification criteria defined",
+        "Triage process established",
+        "All events logged"
+      ],
+      "evidence_requirements": [
+        "Incident logs",
+        "Classification records"
+      ]
+    },
+    {
+      "control_id": "5.26",
+      "title": "Response to information security incidents",
+      "category": "Organizational",
+      "description": "Information security incidents shall be responded to in accordance with the documented procedures.",
+      "objective": "Contain, eradicate, and recover from security incidents effectively.",
+      "purpose": "Minimize the impact of security incidents through structured response.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Follow the IRP for all confirmed incidents. Document containment, eradication, and recovery steps. Communicate with stakeholders. Preserve evidence for forensics.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Incident Response Team",
+      "supporting_teams": [],
+      "review_frequency": "Per event",
+      "retention_period": "5 years",
+      "required_policies": [],
+      "required_procedures": [
+        "Incident Response Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Incident Response Records",
+        "Forensic Evidence Log"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Response followed IRP",
+        "Stakeholders notified",
+        "Evidence preserved"
+      ],
+      "evidence_requirements": [
+        "Incident response records",
+        "Stakeholder notifications"
+      ]
+    },
+    {
+      "control_id": "5.27",
+      "title": "Learning from information security incidents",
+      "category": "Organizational",
+      "description": "Knowledge gained from information security incidents shall be used to strengthen and improve information security controls.",
+      "objective": "Improve security posture through lessons learned from incidents.",
+      "purpose": "Turn incidents into opportunities for security improvement.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Conduct post-incident reviews. Document lessons learned. Update controls, procedures, and training based on findings. Track improvement actions.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / Incident Response Team",
+      "supporting_teams": [],
+      "review_frequency": "Per incident",
+      "retention_period": "3 years",
+      "required_policies": [],
+      "required_procedures": [
+        "Post-Incident Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Lessons Learned Reports",
+        "Improvement Action Tracker"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Post-incident review conducted",
+        "Lessons documented",
+        "Improvements tracked"
+      ],
+      "evidence_requirements": [
+        "Post-incident review reports",
+        "Action tracker"
+      ]
+    },
+    {
+      "control_id": "5.28",
+      "title": "Collection of evidence",
+      "category": "Organizational",
+      "description": "The organization shall establish and implement procedures for the identification, collection, acquisition, and preservation of evidence related to information security events.",
+      "objective": "Ensure evidence is collected and preserved for disciplinary and legal proceedings.",
+      "purpose": "Enable effective investigation and legal action post-incident.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define evidence handling procedures. Train incident responders on forensic basics. Use write-blockers for physical media. Maintain chain of custody. Use digital forensic tools.",
+      "maturity_level": "Advanced",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / Legal",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "5+ years",
+      "required_policies": [],
+      "required_procedures": [
+        "Evidence Collection Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Chain of Custody Records",
+        "Evidence Inventory"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Evidence procedures defined",
+        "Staff trained",
+        "Chain of custody maintained"
+      ],
+      "evidence_requirements": [
+        "Evidence handling procedures",
+        "Chain of custody documentation"
+      ]
+    },
+    {
+      "control_id": "5.29",
+      "title": "Information security during disruption",
+      "category": "Organizational",
+      "description": "The organization shall plan how to maintain information security at an appropriate level during disruption.",
+      "objective": "Maintain security controls during adverse events and disasters.",
+      "purpose": "Prevent security degradation during business continuity events.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Integrate security requirements into BCP/DRP. Define minimum security controls required during disruption. Test continuity arrangements regularly.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / BCM Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Business Continuity Security Policy"
+      ],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "BCP/DRP Test Results"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Security in BCP",
+        "DRP tested",
+        "Minimum controls defined"
+      ],
+      "evidence_requirements": [
+        "BCP/DRP documents",
+        "Test results"
+      ]
+    },
+    {
+      "control_id": "5.3",
+      "title": "Segregation of duties",
+      "category": "Organizational",
+      "description": "Conflicting duties and conflicting areas of responsibility shall be segregated.",
+      "objective": "Reduce opportunities for unauthorized or unintentional modification or misuse of assets.",
+      "purpose": "Prevent fraud and error by ensuring no single person controls all critical processes.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Identify critical processes that require segregation. Map duties and identify conflicts. Implement compensating controls where segregation is not feasible. Document exceptions.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Segregation of Duties Policy"
+      ],
+      "required_procedures": [
+        "SoD Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Duty Matrix",
+        "Exception Log"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Critical duties identified",
+        "Conflicts resolved",
+        "Compensating controls documented"
+      ],
+      "evidence_requirements": [
+        "SoD matrix",
+        "Exception approvals",
+        "Access control records"
+      ]
+    },
+    {
+      "control_id": "5.30",
+      "title": "ICT readiness for business continuity",
+      "category": "Organizational",
+      "description": "ICT readiness shall be planned, implemented, maintained, and tested based on business continuity objectives and ICT continuity requirements.",
+      "objective": "Ensure ICT systems can support business operations during disruption.",
+      "purpose": "Guarantee availability of critical ICT systems when needed most.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define RTO/RPO for critical systems. Implement redundancy and backup. Test recovery annually. Document ICT continuity plans.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / BCM Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "RTO/RPO Definitions",
+        "Test Results"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "RTO/RPO defined",
+        "Redundancy implemented",
+        "Annual test completed"
+      ],
+      "evidence_requirements": [
+        "ICT continuity plan",
+        "Test results",
+        "RTO/RPO records"
+      ]
+    },
+    {
+      "control_id": "5.31",
+      "title": "Legal, statutory, regulatory, and contractual requirements",
+      "category": "Organizational",
+      "description": "Legal, statutory, regulatory, and contractual requirements relevant to information security shall be identified, documented, and kept up to date.",
+      "objective": "Ensure compliance with all applicable legal and regulatory requirements.",
+      "purpose": "Avoid legal penalties and maintain compliance.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Maintain a compliance register. Monitor regulatory updates. Assign compliance responsibilities. Review annually.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Legal / Compliance Officer",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "5 years",
+      "required_policies": [
+        "Compliance Policy"
+      ],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Compliance Assessment Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Compliance register maintained",
+        "Regulatory changes tracked",
+        "Requirements documented"
+      ],
+      "evidence_requirements": [
+        "Compliance register",
+        "Assessment reports"
+      ]
+    },
+    {
+      "control_id": "5.32",
+      "title": "Intellectual property rights",
+      "category": "Organizational",
+      "description": "The organization shall implement appropriate procedures to protect intellectual property rights.",
+      "objective": "Ensure compliance with intellectual property laws and regulations.",
+      "purpose": "Protect the organization from IP infringement liability.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement software asset management. License tracking. Prohibit unauthorized software installation. Conduct regular audits.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Legal / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "5 years",
+      "required_policies": [
+        "Intellectual Property Policy"
+      ],
+      "required_procedures": [
+        "Software License Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "License Audit Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Software licenses tracked",
+        "Unauthorized software prohibited",
+        "Audits conducted"
+      ],
+      "evidence_requirements": [
+        "License register",
+        "Audit reports"
+      ]
+    },
+    {
+      "control_id": "5.33",
+      "title": "Protection of records",
+      "category": "Organizational",
+      "description": "Records shall be protected from loss, destruction, falsification, unauthorized access, and unauthorized release.",
+      "objective": "Ensure records are available when needed and protected from tampering.",
+      "purpose": "Maintain integrity and availability of organizational records.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define retention schedules. Implement access controls on records. Use immutable storage where possible. Test restoration regularly.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Records Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "As per legal requirements",
+      "required_policies": [
+        "Records Management Policy"
+      ],
+      "required_procedures": [
+        "Records Retention Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Retention schedules defined",
+        "Access controls applied",
+        "Backups tested"
+      ],
+      "evidence_requirements": [
+        "Retention schedule",
+        "Access control records",
+        "Backup test results"
+      ]
+    },
+    {
+      "control_id": "5.34",
+      "title": "Privacy and protection of personally identifiable information (PII)",
+      "category": "Organizational",
+      "description": "The organization shall identify and meet the requirements regarding the preservation of privacy and protection of PII according to applicable laws and regulations.",
+      "objective": "Protect personal data in compliance with privacy regulations.",
+      "purpose": "Maintain trust and comply with GDPR and other privacy laws.",
+      "applicability": "All organizations handling personal data",
+      "mandatory": true,
+      "implementation_guidance": "Appoint a DPO where required. Conduct DPIA. Implement privacy by design. Maintain records of processing activities (ROPA). Train staff on data protection.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "DPO / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "Per legal requirements",
+      "required_policies": [
+        "Data Protection / Privacy Policy"
+      ],
+      "required_procedures": [
+        "DPIA Procedure",
+        "Data Subject Rights Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "ROPA",
+        "DPIA Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "DPO appointed",
+        "DPIA conducted",
+        "ROPA maintained",
+        "Staff trained"
+      ],
+      "evidence_requirements": [
+        "ROPA",
+        "DPIA reports",
+        "Training records"
+      ]
+    },
+    {
+      "control_id": "5.35",
+      "title": "Independent review of information security",
+      "category": "Organizational",
+      "description": "The organization's approach to managing information security and its implementation shall be reviewed independently at planned intervals.",
+      "objective": "Ensure independent assurance of ISMS effectiveness.",
+      "purpose": "Provide objective assessment of the ISMS through independent audits.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Conduct annual internal audits. Commission external audits or penetration tests. Report findings to management. Track remediation of findings.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Internal Audit / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "5 years",
+      "required_policies": [
+        "Audit Policy"
+      ],
+      "required_procedures": [
+        "Internal Audit Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Audit Reports",
+        "Audit Plan"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Annual audit planned",
+        "Independent auditor assigned",
+        "Findings reported to management"
+      ],
+      "evidence_requirements": [
+        "Audit reports",
+        "Audit plan",
+        "Management review of findings"
+      ]
+    },
+    {
+      "control_id": "5.36",
+      "title": "Compliance with policies, rules, and standards for information security",
+      "category": "Organizational",
+      "description": "Compliance with the organization's information security policy, topic-specific policies, rules, and standards shall be regularly reviewed.",
+      "objective": "Ensure all policies and standards are consistently followed.",
+      "purpose": "Identify and address compliance gaps proactively.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Schedule periodic compliance reviews for each policy. Use compliance dashboards or checklists. Document findings and remediation. Report to management.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / Compliance Officer",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Compliance Monitoring Policy"
+      ],
+      "required_procedures": [
+        "Compliance Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Compliance Review Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "All policies reviewed",
+        "Non-compliance tracked",
+        "Remediation plans in place"
+      ],
+      "evidence_requirements": [
+        "Compliance review reports",
+        "Remediation records"
+      ]
+    },
+    {
+      "control_id": "5.37",
+      "title": "Documented operating procedures",
+      "category": "Organizational",
+      "description": "Operating procedures for information processing facilities shall be documented and made available to personnel who need them.",
+      "objective": "Ensure consistent, correct operation of information processing systems.",
+      "purpose": "Prevent errors and security breaches caused by inconsistent procedures.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Document all critical IT operating procedures. Store in accessible location. Review when systems change. Include startup/shutdown, backup, monitoring, and error handling procedures.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual or on change",
+      "retention_period": "3 years",
+      "required_policies": [],
+      "required_procedures": [
+        "System Operating Procedures"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Procedure Review Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Procedures documented",
+        "Accessible to all relevant staff",
+        "Reviewed regularly"
+      ],
+      "evidence_requirements": [
+        "Operating procedure documents",
+        "Review records"
+      ]
+    },
+    {
+      "control_id": "5.4",
+      "title": "Management responsibilities",
+      "category": "Organizational",
+      "description": "Management shall require all personnel to apply information security in accordance with the established information security policy.",
+      "objective": "Ensure management actively enforces information security compliance.",
+      "purpose": "Create accountability at the management level for information security.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Include information security responsibilities in performance reviews. Ensure managers cascade security requirements to their teams. Conduct periodic compliance checks.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Top Management / HR",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Management Information Security Responsibilities Policy"
+      ],
+      "required_procedures": [
+        "Compliance Enforcement Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Performance Review Records",
+        "Compliance Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Management briefed on responsibilities",
+        "Compliance integrated in performance reviews"
+      ],
+      "evidence_requirements": [
+        "Performance appraisal records",
+        "Management briefing records"
+      ]
+    },
+    {
+      "control_id": "5.5",
+      "title": "Contact with authorities",
+      "category": "Organizational",
+      "description": "Appropriate contacts with relevant authorities shall be maintained.",
+      "objective": "Ensure timely flow of information security insights from authorities.",
+      "purpose": "Maintain relationships with regulatory bodies, law enforcement, and government agencies.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Identify relevant regulatory bodies (data protection authority, CERT, law enforcement). Assign responsibility for maintaining contacts. Document contacts and escalation procedures.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / Legal",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "External Contact Policy"
+      ],
+      "required_procedures": [
+        "Authority Contact Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Contact Registry",
+        "Communication Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Key authorities identified",
+        "Contact details maintained",
+        "Escalation paths defined"
+      ],
+      "evidence_requirements": [
+        "Contact list",
+        "Communication records"
+      ]
+    },
+    {
+      "control_id": "5.6",
+      "title": "Contact with special interest groups",
+      "category": "Organizational",
+      "description": "Appropriate contacts with special interest groups, security forums, and professional associations shall be maintained.",
+      "objective": "Maintain awareness of current threats, vulnerabilities, and best practices.",
+      "purpose": "Leverage industry knowledge and collaborative intelligence sharing.",
+      "applicability": "All organizations",
+      "mandatory": false,
+      "implementation_guidance": "Join ISACs, ISACA, (ISC)², local CERT communities. Subscribe to threat intelligence feeds. Share learnings with internal teams.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / Security Team",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "External Engagement Policy"
+      ],
+      "required_procedures": [
+        "Interest Group Membership Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Membership List",
+        "Meeting Notes"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Industry groups identified",
+        "Membership maintained",
+        "Learnings shared internally"
+      ],
+      "evidence_requirements": [
+        "Membership certificates",
+        "Attendance records"
+      ]
+    },
+    {
+      "control_id": "5.7",
+      "title": "Threat intelligence",
+      "category": "Organizational",
+      "description": "Information relating to information security threats shall be collected and analysed to produce threat intelligence.",
+      "objective": "Ensure awareness of and response to evolving threats.",
+      "purpose": "Use threat intelligence to proactively defend against relevant threats.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Subscribe to threat intelligence feeds (e.g., MISP, STIX/TAXII). Assign staff to monitor and analyse. Share actionable intelligence with IT/security teams. Review threat landscape quarterly.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Security Analyst / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "2 years",
+      "required_policies": [
+        "Threat Intelligence Policy"
+      ],
+      "required_procedures": [
+        "Threat Intelligence Collection Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Threat Intelligence Reports",
+        "Feed Subscriptions"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Feed sources defined",
+        "Analysis process in place",
+        "Reports distributed"
+      ],
+      "evidence_requirements": [
+        "Threat intelligence reports",
+        "Subscription records"
+      ]
+    },
+    {
+      "control_id": "5.8",
+      "title": "Information security in project management",
+      "category": "Organizational",
+      "description": "Information security shall be integrated into project management.",
+      "objective": "Ensure security is considered in all projects from inception to completion.",
+      "purpose": "Embed security into the project lifecycle to avoid costly remediation later.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Include security requirements in project charters. Conduct security reviews at project gates. Assign a security representative to projects. Include security testing in project acceptance criteria.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Project Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Per project",
+      "retention_period": "Project + 3 years",
+      "required_policies": [
+        "Information Security in Projects Policy"
+      ],
+      "required_procedures": [
+        "Security Review Procedure for Projects"
+      ],
+      "required_standards": [
+        "Project Security Requirements Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Project Security Assessments",
+        "Gate Review Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Security in project charter",
+        "Security sign-off at each gate",
+        "Security testing completed"
+      ],
+      "evidence_requirements": [
+        "Project security assessments",
+        "Signed gate reviews"
+      ]
+    },
+    {
+      "control_id": "5.9",
+      "title": "Inventory of information and other associated assets",
+      "category": "Organizational",
+      "description": "An inventory of information and associated assets, including owners, shall be developed and maintained.",
+      "objective": "Identify and manage all information assets to protect them appropriately.",
+      "purpose": "You cannot protect what you don't know exists — an asset inventory is foundational.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Create and maintain an asset register covering information assets, hardware, software, and services. Assign owners to each asset. Classify assets by criticality. Review at least annually.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [
+        "RISK-002",
+        "R-01"
+      ],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Asset Owner",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Asset Management Policy"
+      ],
+      "required_procedures": [
+        "Asset Registration Procedure",
+        "Asset Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Asset Ownership Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "All assets inventoried",
+        "Owners assigned",
+        "Classification applied"
+      ],
+      "evidence_requirements": [
+        "Signed asset register",
+        "Review records"
+      ]
+    },
+    {
+      "control_id": "6.1",
+      "title": "Screening",
+      "category": "People",
+      "description": "Background verification checks on all candidates for employment shall be carried out prior to joining.",
+      "objective": "Reduce the risk of hiring individuals who may pose a security threat.",
+      "purpose": "Verify candidate suitability through background checks.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement pre-employment screening (criminal checks, reference checks, education verification). Proportional to the role sensitivity. Repeat for high-risk roles. Document results.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "HR",
+      "supporting_teams": [],
+      "review_frequency": "Per hire",
+      "retention_period": "Employment + 5 years",
+      "required_policies": [
+        "Screening Policy"
+      ],
+      "required_procedures": [
+        "Background Check Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Screening Results"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Screening policy defined",
+        "All new hires screened",
+        "Results documented"
+      ],
+      "evidence_requirements": [
+        "Background check records",
+        "Consent forms"
+      ]
+    },
+    {
+      "control_id": "6.2",
+      "title": "Terms and conditions of employment",
+      "category": "People",
+      "description": "Employment contractual agreements shall state the responsibilities of personnel for information security.",
+      "objective": "Ensure employees understand their information security responsibilities.",
+      "purpose": "Create binding obligations for information security compliance.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Include confidentiality obligations, AUP reference, and security responsibilities in employment contracts. Have employees sign before start. Update upon role change.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "HR / Legal",
+      "supporting_teams": [],
+      "review_frequency": "Per contract renewal",
+      "retention_period": "Employment + 5 years",
+      "required_policies": [
+        "HR Security Policy"
+      ],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Signed Contracts"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Security clauses in contracts",
+        "NDAs signed",
+        "Awareness completed before start"
+      ],
+      "evidence_requirements": [
+        "Signed contracts",
+        "Signed NDAs"
+      ]
+    },
+    {
+      "control_id": "6.3",
+      "title": "Information security awareness, education, and training",
+      "category": "People",
+      "description": "Personnel shall receive appropriate information security awareness, education, and training.",
+      "objective": "Ensure all personnel are equipped to fulfill their security responsibilities.",
+      "purpose": "Reduce human error and insider threat through education.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Deliver annual security awareness training. Include phishing simulations. Role-specific training for IT/security staff. New hire onboarding training. Track completion.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / HR",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Security Awareness Policy"
+      ],
+      "required_procedures": [
+        "Training Delivery Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Training Completion Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Annual training delivered",
+        "Completion tracked",
+        "Phishing simulations run"
+      ],
+      "evidence_requirements": [
+        "Training records",
+        "Completion reports",
+        "Phishing simulation results"
+      ]
+    },
+    {
+      "control_id": "6.4",
+      "title": "Disciplinary process",
+      "category": "People",
+      "description": "A disciplinary process shall be formalized and communicated to take action against personnel who have committed an information security policy violation.",
+      "objective": "Deter policy violations and enforce accountability.",
+      "purpose": "Ensure consequences for security policy violations.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define a formal disciplinary process for security violations. Include in HR policy. Communicate to all staff. Apply consistently. Document all disciplinary actions.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "HR / Legal",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "Employment + 5 years",
+      "required_policies": [
+        "Disciplinary Policy"
+      ],
+      "required_procedures": [
+        "Disciplinary Process Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Disciplinary Action Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Disciplinary policy defined",
+        "Communicated to all staff",
+        "Process consistently applied"
+      ],
+      "evidence_requirements": [
+        "Disciplinary policy",
+        "Communication records"
+      ]
+    },
+    {
+      "control_id": "6.5",
+      "title": "Responsibilities after termination or change of employment",
+      "category": "People",
+      "description": "Information security responsibilities that remain valid after termination or change of employment shall be defined, communicated to the employee or contractor, and enforced.",
+      "objective": "Maintain security obligations beyond employment.",
+      "purpose": "Protect confidential information after personnel leave.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Include post-employment security obligations in contracts. Conduct exit interviews. Revoke all access immediately on termination. Follow up on outstanding obligations.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "HR / Legal",
+      "supporting_teams": [],
+      "review_frequency": "Per termination",
+      "retention_period": "Employment + 5 years",
+      "required_policies": [
+        "Termination Security Policy"
+      ],
+      "required_procedures": [
+        "Offboarding Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Offboarding Checklists"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Post-employment obligations in contract",
+        "Exit interview conducted",
+        "All access revoked"
+      ],
+      "evidence_requirements": [
+        "Offboarding checklists",
+        "Access revocation records"
+      ]
+    },
+    {
+      "control_id": "6.6",
+      "title": "Confidentiality or non-disclosure agreements",
+      "category": "People",
+      "description": "Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of information shall be identified, documented, regularly reviewed, and signed.",
+      "objective": "Protect confidential information shared with employees, contractors, and third parties.",
+      "purpose": "Create enforceable confidentiality obligations.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Use NDAs for employees, contractors, and third parties with access to sensitive information. Include in onboarding. Review NDAs annually. Maintain signed copies.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Legal / HR",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "Agreement + 5 years",
+      "required_policies": [],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Signed NDA Register"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "NDAs defined",
+        "All relevant parties have signed",
+        "Signed copies stored"
+      ],
+      "evidence_requirements": [
+        "Signed NDAs",
+        "NDA register"
+      ]
+    },
+    {
+      "control_id": "6.7",
+      "title": "Remote working",
+      "category": "People",
+      "description": "Security measures shall be implemented when personnel are working remotely to protect information accessed, processed, or stored outside the organization's premises.",
+      "objective": "Protect organizational information in remote working environments.",
+      "purpose": "Extend organizational security controls to remote work scenarios.",
+      "applicability": "Organizations with remote workers",
+      "mandatory": true,
+      "implementation_guidance": "Define a Remote Working Policy. Require VPN for organizational system access. Ensure secure home network practices. Provide guidance on physical security of devices. Implement MDM.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Remote Working Policy"
+      ],
+      "required_procedures": [
+        "Remote Access Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Remote Access Agreements"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Remote working policy defined",
+        "VPN required",
+        "MDM deployed",
+        "Physical security guidance provided"
+      ],
+      "evidence_requirements": [
+        "Remote working policy",
+        "VPN config",
+        "MDM enrollment records"
+      ]
+    },
+    {
+      "control_id": "6.8",
+      "title": "Information security event reporting",
+      "category": "People",
+      "description": "The organization shall provide a mechanism for personnel to report observed or suspected information security events.",
+      "objective": "Enable timely reporting of security events by all personnel.",
+      "purpose": "Create a culture of security vigilance and reporting.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Provide simple reporting mechanism (email, ticketing, hotline). Train all staff on what and how to report. Ensure no blame culture for good-faith reports. Acknowledge and close all reports.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Incident Reporting Policy"
+      ],
+      "required_procedures": [
+        "Event Reporting Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Reported Event Log"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Reporting mechanism in place",
+        "All staff trained",
+        "Reports acknowledged"
+      ],
+      "evidence_requirements": [
+        "Reporting channel records",
+        "Training records",
+        "Event log"
+      ]
+    },
+    {
+      "control_id": "7.1",
+      "title": "Physical security perimeters",
+      "category": "Physical",
+      "description": "Security perimeters shall be defined and used to protect areas that contain information and other associated assets.",
+      "objective": "Prevent unauthorized physical access to information processing facilities.",
+      "purpose": "Establish physical boundaries to protect sensitive areas.",
+      "applicability": "All organizations with physical facilities",
+      "mandatory": true,
+      "implementation_guidance": "Define secure zones (e.g., server rooms, data centers, offices). Implement physical barriers (walls, locked doors). Use access control systems. Conduct perimeter inspections.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Facilities Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Physical Security Policy"
+      ],
+      "required_procedures": [
+        "Physical Security Perimeter Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Site Security Inspection Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Perimeters defined",
+        "Physical controls in place",
+        "Inspections conducted"
+      ],
+      "evidence_requirements": [
+        "Site security assessments",
+        "Perimeter inspection records"
+      ]
+    },
+    {
+      "control_id": "7.10",
+      "title": "Storage media",
+      "category": "Physical",
+      "description": "Storage media shall be managed through its lifecycle of acquisition, use, transportation, and disposal.",
+      "objective": "Protect information on storage media throughout its lifecycle.",
+      "purpose": "Prevent data leakage from improperly managed media.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Maintain media inventory. Control use of removable media. Encrypt sensitive media. Securely dispose of media (wiping/shredding). Track transfers.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Removable Media Policy"
+      ],
+      "required_procedures": [
+        "Media Management Procedure",
+        "Secure Disposal Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Media Inventory",
+        "Disposal Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Media inventoried",
+        "Removable media controlled",
+        "Disposal process defined"
+      ],
+      "evidence_requirements": [
+        "Media inventory",
+        "Disposal certificates"
+      ]
+    },
+    {
+      "control_id": "7.11",
+      "title": "Supporting utilities",
+      "category": "Physical",
+      "description": "Information processing facilities shall be protected from power failures and other disruptions caused by failures in supporting utilities.",
+      "objective": "Ensure continuity of information processing through reliable utilities.",
+      "purpose": "Prevent disruption from utility failures.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Install UPS for critical systems. Implement redundant power feeds. Test generators regularly. Monitor HVAC and power systems. Define escalation procedures.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Facilities Manager / IT",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Supporting Utilities Policy"
+      ],
+      "required_procedures": [
+        "Utility Failure Response Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Utility Test Records",
+        "Maintenance Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "UPS installed",
+        "Generators tested",
+        "HVAC monitored"
+      ],
+      "evidence_requirements": [
+        "UPS test records",
+        "Generator test logs"
+      ]
+    },
+    {
+      "control_id": "7.12",
+      "title": "Cabling security",
+      "category": "Physical",
+      "description": "Cables carrying power or data shall be protected from interception, interference, or damage.",
+      "objective": "Prevent physical tampering with network and power cables.",
+      "purpose": "Protect data integrity and availability through cable security.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Route cables through secured conduits. Label all cables. Use fiber optics for sensitive runs. Inspect cable runs regularly. Lock cable access panels.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Facilities",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Cabling Security Policy"
+      ],
+      "required_procedures": [
+        "Cabling Security Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Cabling Inspection Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Cables in secure conduits",
+        "Labels applied",
+        "Inspections conducted"
+      ],
+      "evidence_requirements": [
+        "Cabling inspection records",
+        "Network diagrams"
+      ]
+    },
+    {
+      "control_id": "7.13",
+      "title": "Equipment maintenance",
+      "category": "Physical",
+      "description": "Equipment shall be maintained correctly to ensure availability and integrity of information.",
+      "objective": "Maintain equipment in good working order to prevent failure.",
+      "purpose": "Ensure equipment reliability through regular maintenance.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Schedule preventive maintenance for all critical equipment. Document maintenance activities. Follow manufacturer specifications. Only authorized personnel perform maintenance.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Facilities",
+      "supporting_teams": [],
+      "review_frequency": "Per maintenance schedule",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Equipment Maintenance Policy"
+      ],
+      "required_procedures": [
+        "Maintenance Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Maintenance Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Maintenance schedule defined",
+        "Logs maintained",
+        "Only authorized staff perform maintenance"
+      ],
+      "evidence_requirements": [
+        "Maintenance logs",
+        "Service contracts"
+      ]
+    },
+    {
+      "control_id": "7.14",
+      "title": "Secure disposal or re-use of equipment",
+      "category": "Physical",
+      "description": "Items of equipment containing storage media shall be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or reuse.",
+      "objective": "Prevent data leakage through improperly disposed equipment.",
+      "purpose": "Ensure no sensitive data remains on decommissioned equipment.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement secure data wiping (NIST 800-88). Use certified disposal vendors. Issue disposal certificates. Update asset register. Physically destroy media when wiping is insufficient.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Per event",
+      "retention_period": "5 years",
+      "required_policies": [
+        "Secure Disposal Policy"
+      ],
+      "required_procedures": [
+        "Secure Disposal Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Disposal Certificates",
+        "Asset Register Updates"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Data wiped before disposal",
+        "Disposal certificates obtained",
+        "Asset register updated"
+      ],
+      "evidence_requirements": [
+        "Disposal certificates",
+        "Vendor contracts"
+      ]
+    },
+    {
+      "control_id": "7.2",
+      "title": "Physical entry",
+      "category": "Physical",
+      "description": "Secure areas shall be protected by appropriate entry controls to ensure that only authorized personnel are allowed access.",
+      "objective": "Prevent unauthorized physical access to secure areas.",
+      "purpose": "Control who can enter sensitive areas.",
+      "applicability": "All organizations with physical facilities",
+      "mandatory": true,
+      "implementation_guidance": "Implement access cards/badges. Use biometric controls for high-security areas. Maintain visitor logs. Escort visitors. Review access rights quarterly.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Facilities Manager",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Physical Access Control Policy"
+      ],
+      "required_procedures": [
+        "Visitor Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Access Logs",
+        "Visitor Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Access cards deployed",
+        "Visitor log maintained",
+        "High-security areas protected"
+      ],
+      "evidence_requirements": [
+        "Access logs",
+        "Visitor records",
+        "Biometric enrollment records"
+      ]
+    },
+    {
+      "control_id": "7.3",
+      "title": "Securing offices, rooms, and facilities",
+      "category": "Physical",
+      "description": "Physical security for offices, rooms, and facilities shall be designed and implemented.",
+      "objective": "Protect organizational facilities from unauthorized access and damage.",
+      "purpose": "Ensure all workspaces are physically secured.",
+      "applicability": "All organizations with physical offices",
+      "mandatory": true,
+      "implementation_guidance": "Install locks on sensitive rooms. Implement clean desk policy. Secure meeting rooms. Lock physical media and sensitive documents. Secure printer areas.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Facilities Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Physical Security Policy",
+        "Clean Desk Policy"
+      ],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Security Inspection Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Rooms secured with locks",
+        "Clean desk enforced",
+        "Sensitive areas restricted"
+      ],
+      "evidence_requirements": [
+        "Inspection records",
+        "CCTV footage"
+      ]
+    },
+    {
+      "control_id": "7.4",
+      "title": "Physical security monitoring",
+      "category": "Physical",
+      "description": "Premises shall be continuously monitored for unauthorized physical access.",
+      "objective": "Detect and deter unauthorized physical access.",
+      "purpose": "Maintain continuous awareness of physical security status.",
+      "applicability": "All organizations with physical facilities",
+      "mandatory": true,
+      "implementation_guidance": "Install CCTV cameras in critical areas. Implement intrusion detection. Monitor logs regularly. Set alerts for after-hours access. Retain footage per local regulations.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Facilities Manager / Security Team",
+      "supporting_teams": [],
+      "review_frequency": "Continuous",
+      "retention_period": "30–90 days CCTV retention",
+      "required_policies": [
+        "CCTV Surveillance Policy"
+      ],
+      "required_procedures": [
+        "Physical Monitoring Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "CCTV Logs",
+        "Intrusion Alert Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "CCTV installed",
+        "Monitoring active",
+        "Logs reviewed regularly"
+      ],
+      "evidence_requirements": [
+        "CCTV system configuration",
+        "Monitoring logs"
+      ]
+    },
+    {
+      "control_id": "7.5",
+      "title": "Protecting against physical and environmental threats",
+      "category": "Physical",
+      "description": "Protection against physical and environmental threats, such as natural disasters, malicious attack, or accidents, shall be designed and implemented.",
+      "objective": "Protect facilities from physical and environmental hazards.",
+      "purpose": "Minimize damage from environmental incidents.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Conduct environmental risk assessment. Install fire suppression, flood detection, and UPS. Separate from hazardous areas. Implement environmental monitoring systems.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Facilities Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Environmental Security Policy"
+      ],
+      "required_procedures": [
+        "Environmental Risk Assessment Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Environmental Risk Assessments",
+        "Incident Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Environmental risks assessed",
+        "Protective measures installed",
+        "Systems tested"
+      ],
+      "evidence_requirements": [
+        "Environmental risk assessment",
+        "System test records"
+      ]
+    },
+    {
+      "control_id": "7.6",
+      "title": "Working in secure areas",
+      "category": "Physical",
+      "description": "Security measures for working in secure areas shall be designed and implemented.",
+      "objective": "Prevent security breaches in secure/sensitive areas.",
+      "purpose": "Minimize insider threat in secure areas.",
+      "applicability": "Organizations with secure areas",
+      "mandatory": true,
+      "implementation_guidance": "Apply need-to-know in secure areas. Prohibit mobile phones/cameras unless approved. Supervise visitors. Log all activity. Limit knowledge of secure area existence.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Facilities Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Secure Area Working Policy"
+      ],
+      "required_procedures": [
+        "Secure Area Working Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Secure Area Access Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Need-to-know enforced",
+        "Mobile devices restricted",
+        "Visitors supervised"
+      ],
+      "evidence_requirements": [
+        "Access logs",
+        "Visitor supervision records"
+      ]
+    },
+    {
+      "control_id": "7.7",
+      "title": "Clear desk and clear screen",
+      "category": "Physical",
+      "description": "Clear desk rules for papers and removable storage media and clear screen rules for information processing facilities shall be defined and appropriately enforced.",
+      "objective": "Prevent unauthorized access to information left unattended.",
+      "purpose": "Reduce physical exposure of sensitive information.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define clear desk/screen policy. Configure screen lock after 5 minutes. Train all staff. Conduct spot checks. Shred sensitive documents.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / HR",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Clear Desk and Clear Screen Policy"
+      ],
+      "required_procedures": [
+        "Clear Desk Enforcement Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Compliance Check Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Policy defined",
+        "Screen lock configured",
+        "Spot checks conducted"
+      ],
+      "evidence_requirements": [
+        "Policy document",
+        "IT screen lock configuration",
+        "Spot check records"
+      ]
+    },
+    {
+      "control_id": "7.8",
+      "title": "Equipment siting and protection",
+      "category": "Physical",
+      "description": "Equipment shall be sited and protected to reduce the risks from physical and environmental threats and from unauthorized access.",
+      "objective": "Minimize physical risk to information processing equipment.",
+      "purpose": "Protect equipment from damage and unauthorized access.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Site servers in secure data centers or rooms. Protect from heat, moisture, EMI. Implement raised floors, power conditioning, and cooling. Restrict physical access to equipment.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Facilities",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Equipment Security Policy"
+      ],
+      "required_procedures": [
+        "Equipment Siting Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Equipment Placement Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Servers in secure rooms",
+        "Environmental controls in place",
+        "Access restricted"
+      ],
+      "evidence_requirements": [
+        "Data center/server room inspection records"
+      ]
+    },
+    {
+      "control_id": "7.9",
+      "title": "Security of assets off-premises",
+      "category": "Physical",
+      "description": "Off-site assets shall be protected.",
+      "objective": "Protect organizational assets used outside organizational premises.",
+      "purpose": "Extend security controls to assets used remotely.",
+      "applicability": "Organizations with remote workers or mobile assets",
+      "mandatory": true,
+      "implementation_guidance": "Implement full disk encryption. Enable remote wipe. Track device locations. Prohibit leaving devices unattended. Provide secure travel guidelines.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Mobile Device Security Policy"
+      ],
+      "required_procedures": [
+        "Off-premises Device Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Asset Tracking Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Encryption enabled",
+        "Remote wipe tested",
+        "Tracking implemented"
+      ],
+      "evidence_requirements": [
+        "Device encryption records",
+        "Remote wipe test results"
+      ]
+    },
+    {
+      "control_id": "8.1",
+      "title": "User endpoint devices",
+      "category": "Technological",
+      "description": "Information stored on, processed by, or accessible via user endpoint devices shall be protected.",
+      "objective": "Secure endpoint devices against threats.",
+      "purpose": "Protect data on all user devices.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Deploy EDR/antivirus on all endpoints. Enable full disk encryption. Apply security baselines. Implement patch management. Configure automatic lock screens.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Endpoint Security Policy"
+      ],
+      "required_procedures": [
+        "Endpoint Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Endpoint Compliance Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "AV/EDR deployed",
+        "Encryption enabled",
+        "Baselines applied",
+        "Patches current"
+      ],
+      "evidence_requirements": [
+        "Endpoint compliance reports",
+        "Configuration records"
+      ]
+    },
+    {
+      "control_id": "8.10",
+      "title": "Information deletion",
+      "category": "Technological",
+      "description": "Information stored in information systems, devices, or in any other storage media shall be deleted when no longer required.",
+      "objective": "Ensure information is securely deleted when no longer needed.",
+      "purpose": "Prevent unauthorized access to residual data.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define retention schedules. Implement secure deletion tools. Verify deletion of data in cloud and on media. Document deletion activities. Cover backup and archive systems.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Records Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Data Retention and Deletion Policy"
+      ],
+      "required_procedures": [
+        "Secure Deletion Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Deletion Certificates"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Retention schedules defined",
+        "Secure deletion tools deployed",
+        "Deletions documented"
+      ],
+      "evidence_requirements": [
+        "Deletion certificates",
+        "Retention schedule"
+      ]
+    },
+    {
+      "control_id": "8.11",
+      "title": "Data masking",
+      "category": "Technological",
+      "description": "Data masking shall be used in accordance with the organization's topic-specific policy on access control and other related topic-specific policies.",
+      "objective": "Protect sensitive data through masking in non-production environments.",
+      "purpose": "Reduce exposure of sensitive data in testing and development.",
+      "applicability": "Organizations with sensitive data in non-production systems",
+      "mandatory": false,
+      "implementation_guidance": "Implement data masking for test/dev environments. Use tokenization for PII. Ensure masked data cannot be reversed. Test masking effectiveness.",
+      "maturity_level": "Advanced",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / DPO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Data Masking Policy"
+      ],
+      "required_procedures": [
+        "Data Masking Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Masking policy defined",
+        "Tools configured",
+        "Dev/test data masked",
+        "Reversal prevented"
+      ],
+      "evidence_requirements": [
+        "Masking configuration",
+        "Test evidence"
+      ]
+    },
+    {
+      "control_id": "8.12",
+      "title": "Data leakage prevention",
+      "category": "Technological",
+      "description": "Data leakage prevention measures shall be applied to systems, networks, and any other devices that process, store, or transmit sensitive information.",
+      "objective": "Prevent unauthorized exfiltration of sensitive data.",
+      "purpose": "Detect and block unauthorized data transfers.",
+      "applicability": "All organizations with sensitive data",
+      "mandatory": true,
+      "implementation_guidance": "Deploy DLP solutions for email, endpoint, and network. Define DLP policies for sensitive data types (PII, financial). Monitor and alert on policy violations. Tune rules regularly.",
+      "maturity_level": "Advanced",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "CISO / IT Security",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Data Loss Prevention Policy"
+      ],
+      "required_procedures": [
+        "DLP Incident Handling Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "DLP Policy Violation Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "DLP solution deployed",
+        "Policies defined",
+        "Alerts monitored",
+        "Violations reviewed"
+      ],
+      "evidence_requirements": [
+        "DLP configuration",
+        "Violation reports"
+      ]
+    },
+    {
+      "control_id": "8.13",
+      "title": "Information backup",
+      "category": "Technological",
+      "description": "Backup copies of information, software, and system images shall be maintained and regularly tested in accordance with the agreed backup policy.",
+      "objective": "Ensure data can be restored in the event of loss or corruption.",
+      "purpose": "Protect data availability through reliable backups.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define backup schedule (daily, weekly). Follow 3-2-1 rule. Encrypt backups. Store offsite. Test restoration at least quarterly. Document RTO/RPO.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "Per retention policy",
+      "required_policies": [
+        "Backup Policy"
+      ],
+      "required_procedures": [
+        "Backup and Restore Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Backup Logs",
+        "Restore Test Results"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Backup schedule defined",
+        "3-2-1 rule followed",
+        "Encryption enabled",
+        "Restoration tested"
+      ],
+      "evidence_requirements": [
+        "Backup logs",
+        "Restore test results"
+      ]
+    },
+    {
+      "control_id": "8.14",
+      "title": "Redundancy of information processing facilities",
+      "category": "Technological",
+      "description": "Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements.",
+      "objective": "Ensure availability of critical systems through redundancy.",
+      "purpose": "Prevent single points of failure in critical systems.",
+      "applicability": "All organizations with availability requirements",
+      "mandatory": true,
+      "implementation_guidance": "Implement high availability for critical systems. Use load balancing and clustering. Define failover procedures. Test failover regularly. Align with RTO/RPO.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "High Availability Policy"
+      ],
+      "required_procedures": [
+        "Failover Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "HA Configuration Docs",
+        "Failover Test Results"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "HA implemented for critical systems",
+        "Failover tested",
+        "RTO/RPO met"
+      ],
+      "evidence_requirements": [
+        "HA configuration docs",
+        "Failover test results"
+      ]
+    },
+    {
+      "control_id": "8.15",
+      "title": "Logging",
+      "category": "Technological",
+      "description": "Logs that record activities, exceptions, faults, and other relevant events shall be produced, stored, protected, and analysed.",
+      "objective": "Maintain an audit trail for security events and system activities.",
+      "purpose": "Support incident investigation and compliance through comprehensive logging.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Enable logging on all critical systems. Define log retention (min. 12 months). Centralize logs in SIEM. Protect logs from tampering. Review logs regularly.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Security / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Monthly",
+      "retention_period": "12 months+",
+      "required_policies": [
+        "Logging Policy"
+      ],
+      "required_procedures": [
+        "Log Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "All critical systems logging",
+        "SIEM deployed",
+        "Logs protected",
+        "Retention defined"
+      ],
+      "evidence_requirements": [
+        "SIEM configuration",
+        "Log samples",
+        "Retention policy"
+      ]
+    },
+    {
+      "control_id": "8.16",
+      "title": "Monitoring activities",
+      "category": "Technological",
+      "description": "Networks, systems, and applications shall be monitored for anomalous behaviour, and appropriate actions shall be taken to evaluate potential information security incidents.",
+      "objective": "Detect security threats and anomalies in real time.",
+      "purpose": "Enable rapid detection and response through continuous monitoring.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Deploy SIEM for correlation. Use IDS/IPS. Monitor user behavior with UEBA. Define alert thresholds. Assign SOC analysts for 24/7 monitoring where critical.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Security / SOC",
+      "supporting_teams": [],
+      "review_frequency": "Continuous",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Security Monitoring Policy"
+      ],
+      "required_procedures": [
+        "Alert Triage Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "SIEM operational",
+        "IDS/IPS deployed",
+        "Alerts defined",
+        "SOC coverage established"
+      ],
+      "evidence_requirements": [
+        "SIEM alert records",
+        "IDS/IPS config",
+        "Monitoring reports"
+      ]
+    },
+    {
+      "control_id": "8.17",
+      "title": "Clock synchronisation",
+      "category": "Technological",
+      "description": "The clocks of information processing systems used by the organization shall be synchronized to approved time sources.",
+      "objective": "Ensure accurate and consistent timestamps across all systems.",
+      "purpose": "Support forensic investigations and log correlation with accurate timestamps.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Configure NTP on all systems pointing to reliable time sources (e.g., GPS-based, national time servers). Monitor for time drift. Include in system baselines.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Clock Synchronisation Policy"
+      ],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "NTP configured on all systems",
+        "Time sources approved",
+        "Drift monitored"
+      ],
+      "evidence_requirements": [
+        "NTP configuration",
+        "Time sync verification"
+      ]
+    },
+    {
+      "control_id": "8.18",
+      "title": "Use of privileged utility programs",
+      "category": "Technological",
+      "description": "The use of utility programs that might be capable of overriding system and application controls shall be restricted and tightly controlled.",
+      "objective": "Prevent misuse of privileged utility tools.",
+      "purpose": "Minimize the risk of system compromise through utility programs.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Restrict access to admin/utility tools. Approve use on case-by-case basis. Log all use. Remove utilities not required. Implement application control (whitelisting).",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Privileged Utility Usage Policy"
+      ],
+      "required_procedures": [
+        "Utility Access Approval Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Utility Usage Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Utility access restricted",
+        "Usage logged",
+        "Application whitelisting implemented"
+      ],
+      "evidence_requirements": [
+        "Access control records",
+        "Usage logs"
+      ]
+    },
+    {
+      "control_id": "8.19",
+      "title": "Installation of software on operational systems",
+      "category": "Technological",
+      "description": "Procedures and measures shall be implemented to securely manage software installation on operational systems.",
+      "objective": "Prevent unauthorized or malicious software installation.",
+      "purpose": "Maintain integrity of operational systems.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Restrict admin rights on endpoints. Implement application whitelisting. Use software deployment tools. Test in non-production before deploying. Maintain approved software list.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Software Installation Policy"
+      ],
+      "required_procedures": [
+        "Software Approval Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Approved Software List",
+        "Deployment Records"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Admin rights restricted",
+        "Whitelisting deployed",
+        "Approval process defined"
+      ],
+      "evidence_requirements": [
+        "Approved software list",
+        "Deployment logs"
+      ]
+    },
+    {
+      "control_id": "8.2",
+      "title": "Privileged access rights",
+      "category": "Technological",
+      "description": "The allocation and use of privileged access rights shall be restricted and managed.",
+      "objective": "Minimize the risk from abuse of privileged access.",
+      "purpose": "Control and monitor privileged account usage.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Inventory all privileged accounts. Apply just-in-time (JIT) access. Use Privileged Access Management (PAM) solutions. Log all privileged activity. Review quarterly.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Privileged Access Policy"
+      ],
+      "required_procedures": [
+        "Privileged Access Provisioning Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Privileged Account Inventory",
+        "Access Review Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "All privileged accounts inventoried",
+        "PAM solution deployed",
+        "Activity logged"
+      ],
+      "evidence_requirements": [
+        "Privileged account inventory",
+        "PAM logs",
+        "Review reports"
+      ]
+    },
+    {
+      "control_id": "8.20",
+      "title": "Networks security",
+      "category": "Technological",
+      "description": "Networks and network devices shall be secured, managed, and controlled to protect information in systems and applications.",
+      "objective": "Secure the organizational network against threats.",
+      "purpose": "Protect data in transit and prevent unauthorized network access.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement firewalls and DMZ. Segment networks. Use VLANs. Monitor network traffic. Perform network penetration tests. Document network architecture.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Network Engineer / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Network Security Policy"
+      ],
+      "required_procedures": [
+        "Network Configuration Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Network Diagrams",
+        "Firewall Rule Reviews"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Firewall deployed",
+        "Network segmented",
+        "Traffic monitored",
+        "Pen test done"
+      ],
+      "evidence_requirements": [
+        "Network diagrams",
+        "Firewall rules",
+        "Pen test report"
+      ]
+    },
+    {
+      "control_id": "8.21",
+      "title": "Security of network services",
+      "category": "Technological",
+      "description": "Security mechanisms, service levels, and service requirements of all network services shall be identified, implemented, and monitored.",
+      "objective": "Ensure network services are securely provided.",
+      "purpose": "Manage security of internal and outsourced network services.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Identify all network services. Define security requirements for each. Implement authentication for service access. Monitor service performance and security. Include in supplier agreements.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Network Engineer / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Network Services Security Policy"
+      ],
+      "required_procedures": [
+        "Network Service Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Service Security Requirements",
+        "Review Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "All services identified",
+        "Security requirements defined",
+        "Services monitored"
+      ],
+      "evidence_requirements": [
+        "Service inventory",
+        "Security requirements docs"
+      ]
+    },
+    {
+      "control_id": "8.22",
+      "title": "Segregation of networks",
+      "category": "Technological",
+      "description": "Groups of information services, users, and information systems shall be segregated in networks.",
+      "objective": "Limit the spread of security incidents through network segmentation.",
+      "purpose": "Contain breaches through network isolation.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Segment networks by function (user, server, DMZ, guest). Use VLANs and firewalls between segments. Limit inter-segment traffic to minimum necessary. Monitor inter-segment traffic.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Network Engineer",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Network Segmentation Policy"
+      ],
+      "required_procedures": [
+        "Network Segmentation Design Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Network Segmentation Diagrams"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Networks segmented",
+        "Traffic controlled between segments",
+        "Guest network isolated"
+      ],
+      "evidence_requirements": [
+        "Network diagrams showing segmentation",
+        "Firewall rules"
+      ]
+    },
+    {
+      "control_id": "8.23",
+      "title": "Web filtering",
+      "category": "Technological",
+      "description": "Access to external websites shall be managed to reduce exposure to malicious content.",
+      "objective": "Prevent access to malicious websites.",
+      "purpose": "Protect users from web-based threats.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Deploy web proxy with category filtering. Block known malicious domains. Filter phishing sites. Monitor and review blocked categories. Apply to remote workers via cloud proxy.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Security",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Web Usage Policy"
+      ],
+      "required_procedures": [
+        "Web Filtering Configuration Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Filtering Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Web proxy deployed",
+        "Malicious categories blocked",
+        "Remote workers covered"
+      ],
+      "evidence_requirements": [
+        "Proxy configuration",
+        "Filtering reports"
+      ]
+    },
+    {
+      "control_id": "8.24",
+      "title": "Use of cryptography",
+      "category": "Technological",
+      "description": "Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented.",
+      "objective": "Protect data confidentiality and integrity through cryptography.",
+      "purpose": "Establish cryptographic standards for protecting sensitive data.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define cryptography policy (approved algorithms, key lengths). Implement PKI. Use TLS 1.2+ for all communications. Encrypt data at rest and in transit. Manage keys securely (HSM where possible).",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Security / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Cryptography Policy"
+      ],
+      "required_procedures": [
+        "Key Management Procedure"
+      ],
+      "required_standards": [
+        "Approved Cryptographic Algorithms Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Crypto policy defined",
+        "Approved algorithms listed",
+        "Keys managed securely",
+        "TLS 1.2+ enforced"
+      ],
+      "evidence_requirements": [
+        "Cryptography policy",
+        "Key management procedures",
+        "TLS configuration"
+      ]
+    },
+    {
+      "control_id": "8.25",
+      "title": "Secure development life cycle",
+      "category": "Technological",
+      "description": "Rules for the secure development of software and systems shall be established and applied.",
+      "objective": "Build security into software from the start.",
+      "purpose": "Reduce vulnerabilities through secure development practices.",
+      "applicability": "Organizations developing software",
+      "mandatory": true,
+      "implementation_guidance": "Implement SSDLC. Include security requirements in design. Conduct threat modeling. Use secure coding standards (OWASP). Integrate SAST/DAST in CI/CD. Train developers in secure coding.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Development Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Secure Development Policy"
+      ],
+      "required_procedures": [
+        "SSDLC Procedure"
+      ],
+      "required_standards": [
+        "Secure Coding Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "SSDLC defined",
+        "Security in requirements",
+        "Threat modeling done",
+        "SAST/DAST integrated"
+      ],
+      "evidence_requirements": [
+        "SSDLC documentation",
+        "Security test results",
+        "Training records"
+      ]
+    },
+    {
+      "control_id": "8.26",
+      "title": "Application security requirements",
+      "category": "Technological",
+      "description": "Information security requirements shall be identified, specified, and approved when developing or acquiring applications.",
+      "objective": "Ensure applications meet security requirements before acquisition or deployment.",
+      "purpose": "Define and validate application security requirements.",
+      "applicability": "Organizations developing or acquiring applications",
+      "mandatory": true,
+      "implementation_guidance": "Define security requirements at project inception. Use security requirements templates. Validate during testing. Include in vendor RFPs for acquired applications.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Development Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Per project",
+      "retention_period": "Project + 3 years",
+      "required_policies": [
+        "Application Security Policy"
+      ],
+      "required_procedures": [
+        "Security Requirements Procedure"
+      ],
+      "required_standards": [
+        "Application Security Requirements Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Security requirements defined",
+        "Validated in testing",
+        "Included in vendor RFPs"
+      ],
+      "evidence_requirements": [
+        "Security requirements documents",
+        "Test results"
+      ]
+    },
+    {
+      "control_id": "8.27",
+      "title": "Secure system architecture and engineering principles",
+      "category": "Technological",
+      "description": "Principles for engineering secure systems shall be established, documented, maintained, and applied to any information system implementation.",
+      "objective": "Implement security as a core principle in system design.",
+      "purpose": "Build secure systems through principled engineering.",
+      "applicability": "Organizations developing systems",
+      "mandatory": true,
+      "implementation_guidance": "Adopt secure-by-design principles. Implement defense in depth. Apply least privilege in architecture. Use zero trust principles. Document architecture decisions with security rationale.",
+      "maturity_level": "Advanced",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Solution Architect / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Secure Architecture Policy"
+      ],
+      "required_procedures": [
+        "Architecture Review Procedure"
+      ],
+      "required_standards": [
+        "Secure Architecture Principles Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Architecture principles documented",
+        "Defense in depth applied",
+        "Zero trust evaluated"
+      ],
+      "evidence_requirements": [
+        "Architecture documentation",
+        "Security design reviews"
+      ]
+    },
+    {
+      "control_id": "8.28",
+      "title": "Secure coding",
+      "category": "Technological",
+      "description": "Secure coding principles shall be applied to software development.",
+      "objective": "Prevent common coding vulnerabilities.",
+      "purpose": "Produce secure code through disciplined practices.",
+      "applicability": "Organizations developing software",
+      "mandatory": true,
+      "implementation_guidance": "Adopt OWASP Top 10 mitigations. Use static analysis tools (SAST). Conduct code reviews. Train developers. Implement input validation everywhere. Avoid known insecure functions.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Development Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Secure Coding Policy"
+      ],
+      "required_procedures": [],
+      "required_standards": [
+        "Secure Coding Standard (OWASP)"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "SAST integrated",
+        "Code reviews conducted",
+        "Developers trained",
+        "Input validation implemented"
+      ],
+      "evidence_requirements": [
+        "SAST reports",
+        "Code review records",
+        "Training records"
+      ]
+    },
+    {
+      "control_id": "8.29",
+      "title": "Security testing in development and acceptance",
+      "category": "Technological",
+      "description": "Security testing processes shall be defined and implemented in the development life cycle.",
+      "objective": "Identify security vulnerabilities before software is deployed.",
+      "purpose": "Validate security through rigorous testing.",
+      "applicability": "Organizations developing software",
+      "mandatory": true,
+      "implementation_guidance": "Define security testing plan. Include SAST, DAST, and penetration testing. Conduct security acceptance testing. Track and remediate findings before go-live.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "QA Manager / Security Engineer",
+      "supporting_teams": [],
+      "review_frequency": "Per release",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Security Testing Policy"
+      ],
+      "required_procedures": [
+        "Security Test Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Security Test Reports",
+        "Penetration Test Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Security tests planned",
+        "SAST/DAST run",
+        "Pen test before go-live",
+        "Findings remediated"
+      ],
+      "evidence_requirements": [
+        "Security test plans",
+        "Test reports",
+        "Remediation records"
+      ]
+    },
+    {
+      "control_id": "8.3",
+      "title": "Information access restriction",
+      "category": "Technological",
+      "description": "Access to information and application system functions shall be restricted in accordance with the access control policy.",
+      "objective": "Enforce access control at the application level.",
+      "purpose": "Prevent unauthorized access to application functions and data.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement role-based access control (RBAC) in all applications. Apply least privilege. Restrict menu options and views by role. Regularly review application access.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Application Owner",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Application Access Control Policy"
+      ],
+      "required_procedures": [
+        "Application Access Review Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Access Review Reports",
+        "Access Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "RBAC implemented",
+        "Least privilege applied",
+        "Regular reviews conducted"
+      ],
+      "evidence_requirements": [
+        "RBAC configuration",
+        "Access review reports"
+      ]
+    },
+    {
+      "control_id": "8.30",
+      "title": "Outsourced development",
+      "category": "Technological",
+      "description": "The organization shall direct, monitor, and review the activities related to outsourced system development.",
+      "objective": "Ensure outsourced development meets security requirements.",
+      "purpose": "Manage security risks in third-party development.",
+      "applicability": "Organizations using outsourced development",
+      "mandatory": true,
+      "implementation_guidance": "Include security requirements in outsourcing contracts. Conduct code reviews of delivered code. Test for vulnerabilities. Require NDAs and IP ownership clauses.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Development Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Per project",
+      "retention_period": "Contract + 3 years",
+      "required_policies": [
+        "Outsourced Development Policy"
+      ],
+      "required_procedures": [],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Code Review Records",
+        "Security Test Results"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Security in contract",
+        "Code reviewed",
+        "Vulnerability tested",
+        "NDA signed"
+      ],
+      "evidence_requirements": [
+        "Contract with security clauses",
+        "Code review records"
+      ]
+    },
+    {
+      "control_id": "8.31",
+      "title": "Separation of development, test, and production environments",
+      "category": "Technological",
+      "description": "Development, testing, and production environments shall be separated and secured.",
+      "objective": "Prevent development/test activities from impacting production.",
+      "purpose": "Protect production systems from development risks.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Maintain separate dev, test, and prod environments. Restrict access to production. Prohibit use of real data in non-prod (use masked data). Document environment differences.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Development Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Environment Separation Policy"
+      ],
+      "required_procedures": [
+        "Environment Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Environment Configuration Docs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Three environments maintained",
+        "Access separated",
+        "No real data in non-prod"
+      ],
+      "evidence_requirements": [
+        "Environment architecture docs",
+        "Access control records"
+      ]
+    },
+    {
+      "control_id": "8.32",
+      "title": "Change management",
+      "category": "Technological",
+      "description": "Changes to information processing facilities and information systems shall be subject to change management procedures.",
+      "objective": "Prevent unauthorized or disruptive changes to information systems.",
+      "purpose": "Control changes through a formal process to minimize security risk.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement formal change management process (RFC, CAB). Assess security impact of all changes. Test changes in non-prod first. Maintain change log. Roll-back plans required.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager / Change Manager",
+      "supporting_teams": [],
+      "review_frequency": "Per change",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Change Management Policy"
+      ],
+      "required_procedures": [
+        "Change Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Change Log",
+        "CAB Meeting Minutes"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "RFC process defined",
+        "Security impact assessed",
+        "CAB approves changes",
+        "Rollback plan exists"
+      ],
+      "evidence_requirements": [
+        "Change log",
+        "CAB minutes",
+        "RFC records"
+      ]
+    },
+    {
+      "control_id": "8.33",
+      "title": "Test information",
+      "category": "Technological",
+      "description": "Test information shall be appropriately selected, protected, and managed.",
+      "objective": "Protect sensitive information used in testing.",
+      "purpose": "Prevent test activities from exposing production data.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define rules for test data selection. Use anonymized or synthetic data. Apply same controls as production if real data must be used. Secure test environments.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "QA Manager / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Test Data Policy"
+      ],
+      "required_procedures": [
+        "Test Data Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Test data policy defined",
+        "Anonymization/masking used",
+        "Real data approved before use"
+      ],
+      "evidence_requirements": [
+        "Test data policy",
+        "Anonymization tool records"
+      ]
+    },
+    {
+      "control_id": "8.34",
+      "title": "Protection of information systems during audit testing",
+      "category": "Technological",
+      "description": "Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed to minimise disruptions to business processes.",
+      "objective": "Ensure audit activities do not disrupt normal operations.",
+      "purpose": "Manage audit risks to production systems.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Plan audit tests with IT. Obtain approvals. Conduct during low-traffic windows. Limit audit access to read-only where possible. Monitor systems during audit. Document findings.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Internal Audit / IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Per audit",
+      "retention_period": "5 years",
+      "required_policies": [
+        "Audit Policy"
+      ],
+      "required_procedures": [
+        "Audit Planning Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Audit Plan",
+        "Audit Agreements",
+        "Audit Results"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Audit planned and approved",
+        "Impact minimized",
+        "Systems monitored during audit"
+      ],
+      "evidence_requirements": [
+        "Audit plan",
+        "Signed audit agreements",
+        "Post-audit report"
+      ]
+    },
+    {
+      "control_id": "8.4",
+      "title": "Access to source code",
+      "category": "Technological",
+      "description": "Read and write access to source code, development tools, and software libraries shall be appropriately managed.",
+      "objective": "Protect source code from unauthorized access or modification.",
+      "purpose": "Prevent code tampering and intellectual property theft.",
+      "applicability": "Organizations developing software",
+      "mandatory": true,
+      "implementation_guidance": "Restrict source code repository access to developers. Implement code review processes. Log all access. Disable production access for developers. Use separate build accounts.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "Development Manager / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Source Code Access Policy"
+      ],
+      "required_procedures": [
+        "Code Repository Access Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Repository Access Logs"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Repository access restricted",
+        "Code review process in place",
+        "Access logged"
+      ],
+      "evidence_requirements": [
+        "Repository access configuration",
+        "Code review records"
+      ]
+    },
+    {
+      "control_id": "8.5",
+      "title": "Secure authentication",
+      "category": "Technological",
+      "description": "Secure authentication technologies and procedures shall be implemented based on information access restrictions.",
+      "objective": "Ensure only authenticated users access organizational systems.",
+      "purpose": "Prevent unauthorized access through robust authentication.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Implement MFA for all systems. Use SSO where possible. Enforce strong password policies. Monitor failed login attempts. Block accounts after repeated failures.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Annual",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Authentication Policy"
+      ],
+      "required_procedures": [
+        "Authentication Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "MFA enabled",
+        "SSO configured",
+        "Account lockout set",
+        "Failed logins monitored"
+      ],
+      "evidence_requirements": [
+        "MFA configuration",
+        "Authentication logs"
+      ]
+    },
+    {
+      "control_id": "8.6",
+      "title": "Capacity management",
+      "category": "Technological",
+      "description": "The use of resources shall be monitored and adjusted, and projections of future capacity requirements shall be made.",
+      "objective": "Ensure adequate system capacity to meet business needs.",
+      "purpose": "Prevent outages due to capacity exhaustion.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Monitor CPU, memory, storage, and network utilization. Set capacity thresholds and alerts. Forecast capacity needs quarterly. Scale proactively.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Capacity Management Policy"
+      ],
+      "required_procedures": [
+        "Capacity Planning Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Capacity Reports",
+        "Utilization Trends"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Monitoring in place",
+        "Thresholds defined",
+        "Quarterly forecasts produced"
+      ],
+      "evidence_requirements": [
+        "Capacity reports",
+        "Monitoring alerts configuration"
+      ]
+    },
+    {
+      "control_id": "8.7",
+      "title": "Protection against malware",
+      "category": "Technological",
+      "description": "Protection against malware shall be implemented and supported by appropriate user awareness.",
+      "objective": "Detect and prevent malware infections.",
+      "purpose": "Protect systems and data from malicious software.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Deploy anti-malware on all endpoints and email gateways. Keep signatures updated. Scan all file transfers. Block known malicious sites. Train users on social engineering.",
+      "maturity_level": "Initial",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Malware Protection Policy"
+      ],
+      "required_procedures": [
+        "Malware Response Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "AV deployed on all endpoints",
+        "Email scanning enabled",
+        "Signatures up to date",
+        "Users trained"
+      ],
+      "evidence_requirements": [
+        "AV deployment records",
+        "Scan reports"
+      ]
+    },
+    {
+      "control_id": "8.8",
+      "title": "Management of technical vulnerabilities",
+      "category": "Technological",
+      "description": "Information about technical vulnerabilities of information systems in use shall be obtained in a timely fashion, the organization's exposure to such vulnerabilities evaluated, and appropriate measures taken.",
+      "objective": "Identify and remediate technical vulnerabilities before they are exploited.",
+      "purpose": "Maintain a strong security posture through vulnerability management.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Subscribe to vulnerability feeds. Conduct regular vulnerability scans. Prioritize patching (CVSS score). Track remediation. Penetration test annually.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Security / CISO",
+      "supporting_teams": [],
+      "review_frequency": "Monthly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Vulnerability Management Policy"
+      ],
+      "required_procedures": [
+        "Vulnerability Scanning Procedure",
+        "Patch Management Procedure"
+      ],
+      "required_standards": [],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Vulnerability Scan Reports",
+        "Remediation Tracker"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Vuln feeds subscribed",
+        "Regular scans run",
+        "Patching prioritized",
+        "Pen test done"
+      ],
+      "evidence_requirements": [
+        "Vulnerability scan reports",
+        "Patch records",
+        "Pen test report"
+      ]
+    },
+    {
+      "control_id": "8.9",
+      "title": "Configuration management",
+      "category": "Technological",
+      "description": "Configurations, including security configurations, of hardware, software, services, and networks shall be established, documented, implemented, monitored, and reviewed.",
+      "objective": "Maintain secure and consistent configurations across all systems.",
+      "purpose": "Prevent security weaknesses from misconfiguration.",
+      "applicability": "All organizations",
+      "mandatory": true,
+      "implementation_guidance": "Define security baselines for all systems. Use CIS Benchmarks. Implement automated configuration management (e.g., Ansible, Chef). Monitor for configuration drift. Review changes via Change Management.",
+      "maturity_level": "Developing",
+      "dependencies": [],
+      "related_controls": [],
+      "related_risks": [],
+      "related_assets": [],
+      "responsible_role": "IT Manager",
+      "supporting_teams": [],
+      "review_frequency": "Quarterly",
+      "retention_period": "3 years",
+      "required_policies": [
+        "Configuration Management Policy"
+      ],
+      "required_procedures": [
+        "Configuration Baseline Procedure"
+      ],
+      "required_standards": [
+        "CIS Benchmarks",
+        "Security Configuration Standard"
+      ],
+      "required_sops": [],
+      "required_guidelines": [],
+      "required_registers": [],
+      "required_records": [
+        "Configuration Baselines",
+        "Drift Reports"
+      ],
+      "required_forms": [],
+      "required_logs": [],
+      "required_technical_configs": [],
+      "required_templates": [],
+      "required_training_materials": [],
+      "required_agreements": [],
+      "required_plans": [],
+      "checklists": [
+        "Baselines defined",
+        "Automated management in place",
+        "Drift monitored"
+      ],
+      "evidence_requirements": [
+        "Configuration baseline documents",
+        "Drift reports"
+      ]
+    }
+  ]
+}
