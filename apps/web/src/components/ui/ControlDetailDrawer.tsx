@@ -15,9 +15,11 @@ export default function ControlDetailDrawer({ control, onClose, onStatusUpdate }
   const { isAdmin } = useAuth()
   const [activeTab, setActiveTab] = useState<'overview' | 'requirements' | 'checklist' | 'evidence'>('overview')
   const [currentStatus, setCurrentStatus] = useState(control.status)
+  const [currentPct, setCurrentPct] = useState(control.completion_percentage)
   const [updating, setUpdating] = useState(false)
   const [linkedDocs, setLinkedDocs] = useState<any[]>([])
   const [loadingDocs, setLoadingDocs] = useState(false)
+  const [checkedItems, setCheckedItems] = useState<Record<number, boolean>>({})
 
   useEffect(() => {
     async function loadLinkedDocs() {
@@ -36,9 +38,61 @@ export default function ControlDetailDrawer({ control, onClose, onStatusUpdate }
       }
     }
     loadLinkedDocs()
-  }, [control.control_id])
+
+    // Load checklist checked items from localStorage
+    const saved = localStorage.getItem(`isms_checklist_checked_${control.control_id}`)
+    if (saved) {
+      try {
+        setCheckedItems(JSON.parse(saved))
+      } catch (e) {
+        console.error(e)
+      }
+    } else {
+      setCheckedItems({})
+    }
+    setCurrentPct(control.completion_percentage)
+    setCurrentStatus(control.status)
+  }, [control.control_id, control.completion_percentage, control.status])
 
   const expectedEvidence = getExpectedEvidence(control.control_id)
+
+  const handleCheckChange = async (index: number, isChecked: boolean) => {
+    const updated = {
+      ...checkedItems,
+      [index]: isChecked
+    }
+    setCheckedItems(updated)
+    localStorage.setItem(`isms_checklist_checked_${control.control_id}`, JSON.stringify(updated))
+
+    const total = control.checklists?.length || 0
+    if (total > 0) {
+      const checkedCount = Object.values(updated).filter(Boolean).length
+      const pct = Math.round((checkedCount / total) * 100)
+      setCurrentPct(pct)
+
+      let newStatus = 'not_started'
+      if (pct === 100) {
+        newStatus = 'implemented'
+      } else if (pct > 0) {
+        newStatus = 'in_progress'
+      }
+      setCurrentStatus(newStatus)
+
+      try {
+        await fetch(`/api/v1/controls/${control.id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            completion_percentage: pct,
+            status: newStatus
+          })
+        })
+        onStatusUpdate?.(control.id, newStatus)
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  }
 
   const updateStatus = async (newStatus: string) => {
     setUpdating(true)
@@ -132,13 +186,13 @@ export default function ControlDetailDrawer({ control, onClose, onStatusUpdate }
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px', fontFamily: 'Share Tech Mono', fontSize: '10px' }}>
             <span style={{ color: 'var(--color-text-muted)', textTransform: 'uppercase' }}>Completion</span>
             <span style={{ fontWeight: 700, color: 'var(--color-accent)' }}>
-              {control.completion_percentage}%
+              {currentPct}%
             </span>
           </div>
           <div className="progress-bar-wrap" style={{ height: '6px' }}>
             <div
               className="progress-bar-fill indigo"
-              style={{ width: `${control.completion_percentage}%`, background: 'var(--color-accent)' }}
+              style={{ width: `${currentPct}%`, background: 'var(--color-accent)' }}
             />
           </div>
         </div>
@@ -284,7 +338,13 @@ export default function ControlDetailDrawer({ control, onClose, onStatusUpdate }
                         background: 'var(--color-bg-primary)',
                       }}
                     >
-                      <input type="checkbox" disabled={!isAdmin} style={{ marginTop: '2px', flexShrink: 0, cursor: !isAdmin ? 'not-allowed' : 'pointer' }} />
+                      <input
+                        type="checkbox"
+                        disabled={!isAdmin}
+                        checked={!!checkedItems[i]}
+                        onChange={(e) => handleCheckChange(i, e.target.checked)}
+                        style={{ marginTop: '2px', flexShrink: 0, cursor: !isAdmin ? 'not-allowed' : 'pointer' }}
+                      />
                       {item}
                     </label>
                   ))}
