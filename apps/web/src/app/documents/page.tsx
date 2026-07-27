@@ -464,16 +464,45 @@ function DocDetailModal({ doc, onClose, onUpdateStatus, onUpdateLink, onDelete }
   )
 }
 
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 
 function DocumentsContent() {
+  const router = useRouter()
   const [docs, setDocs] = useState<Document[]>([])
   const [loading, setLoading] = useState(true)
   const [showModal, setShowModal] = useState(false)
   const [selectedDoc, setSelectedDoc] = useState<Document | null>(null)
-  const [filterType, setFilterType] = useState('')
-  const [filterStatus, setFilterStatus] = useState('')
-  const [searchQuery, setSearchQuery] = useState('')
+  
+  const [filterType, setFilterType] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_doc_type') || ''
+    }
+    return ''
+  })
+  const [filterStatus, setFilterStatus] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_doc_status') || ''
+    }
+    return ''
+  })
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_doc_search') || ''
+    }
+    return ''
+  })
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_doc_type', filterType)
+  }, [filterType])
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_doc_status', filterStatus)
+  }, [filterStatus])
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_doc_search', searchQuery)
+  }, [searchQuery])
 
   const searchParams = useSearchParams()
   const addParam = searchParams.get('add') === 'true'
@@ -504,8 +533,7 @@ function DocumentsContent() {
 
   const handleCloseModal = () => {
     setShowModal(false)
-    // Clear URL parameters without page reload
-    window.history.replaceState({}, '', window.location.pathname)
+    router.replace('/documents')
   }
 
   const handleUpdateStatus = async (id: number, status: string) => {

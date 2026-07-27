@@ -12,11 +12,38 @@ const STATUSES = ['not_started', 'in_progress', 'implemented']
 export default function ControlsPage() {
   const [data, setData] = useState<PaginatedControls | null>(null)
   const [loading, setLoading] = useState(true)
-  const [search, setSearch] = useState('')
-  const [category, setCategory] = useState('')
-  const [status, setStatus] = useState('')
+  const [search, setSearch] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_ctrl_search') || ''
+    }
+    return ''
+  })
+  const [category, setCategory] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_ctrl_category') || ''
+    }
+    return ''
+  })
+  const [status, setStatus] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_ctrl_status') || ''
+    }
+    return ''
+  })
   const [page, setPage] = useState(1)
   const [selected, setSelected] = useState<Control | null>(null)
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_ctrl_search', search)
+  }, [search])
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_ctrl_category', category)
+  }, [category])
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_ctrl_status', status)
+  }, [status])
 
   const fetchControls = useCallback(async () => {
     setLoading(true)

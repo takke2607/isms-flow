@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/layout/AuthWrapper'
 
@@ -48,9 +48,37 @@ function EvidenceTypePill({ type }: { type: string }) {
 export default function EvidenceClient({ initialEvidence }: EvidenceClientProps) {
   const router = useRouter()
   const { isAdmin } = useAuth()
-  const [filterCat, setFilterCat] = useState('All')
-  const [filterStatus, setFilterStatus] = useState('all')
-  const [search, setSearch] = useState('')
+  
+  const [filterCat, setFilterCat] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_ev_cat') || 'All'
+    }
+    return 'All'
+  })
+  const [filterStatus, setFilterStatus] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_ev_status') || 'all'
+    }
+    return 'all'
+  })
+  const [search, setSearch] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_ev_search') || ''
+    }
+    return ''
+  })
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_ev_cat', filterCat)
+  }, [filterCat])
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_ev_status', filterStatus)
+  }, [filterStatus])
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_ev_search', search)
+  }, [search])
 
   const stats = useMemo(() => {
     const total = initialEvidence.length

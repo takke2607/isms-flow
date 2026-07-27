@@ -746,8 +746,26 @@ export default function RisksPage() {
   const [loading, setLoading] = useState(true)
   const [showModal, setShowModal] = useState(false)
   const [activeRisk, setActiveRisk] = useState<Risk | null>(null)
-  const [filterLevel, setFilterLevel] = useState('')
-  const [filterStatus, setFilterStatus] = useState('')
+  const [filterLevel, setFilterLevel] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_risk_level') || ''
+    }
+    return ''
+  })
+  const [filterStatus, setFilterStatus] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isms_filter_risk_status') || ''
+    }
+    return ''
+  })
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_risk_level', filterLevel)
+  }, [filterLevel])
+
+  useEffect(() => {
+    sessionStorage.setItem('isms_filter_risk_status', filterStatus)
+  }, [filterStatus])
 
   const fetchRisks = async () => {
     setLoading(true)
