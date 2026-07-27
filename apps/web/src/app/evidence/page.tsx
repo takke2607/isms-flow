@@ -5,6 +5,8 @@ import prisma from '@/lib/prisma'
 
 import { REQUIRED_EVIDENCE_MAP } from '@/lib/evidenceMap'
 
+export const dynamic = 'force-dynamic'
+
 export default async function EvidencePage() {
   let clauses: any[] = []
   let controls: any[] = []

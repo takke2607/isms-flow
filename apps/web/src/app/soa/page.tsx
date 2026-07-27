@@ -3,6 +3,8 @@ import Header from '@/components/layout/Header'
 import SoAClient from './SoAClient'
 import prisma from '@/lib/prisma'
 
+export const dynamic = 'force-dynamic'
+
 export default async function SoABuilderPage() {
   let controls: any[] = []
   let allRisks: any[] = []
