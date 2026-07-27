@@ -26,7 +26,7 @@ export default function ControlsPage() {
       if (category) params.set('category', category)
       if (status) params.set('status', status)
 
-      const res = await fetch(`${API_BASE}/api/v1/controls?${params}`)
+      const res = await fetch(`${API_BASE}/api/v1/controls?${params}&t=${Date.now()}`)
       const json = await res.json()
       setData(json)
     } catch (e) {

@@ -95,8 +95,8 @@ function AddDocModal({ onClose, onSave, initialControlId = '' }: AddDocModalProp
     async function loadOptions() {
       try {
         const [clausesRes, controlsRes] = await Promise.all([
-          fetch('/api/v1/clauses'),
-          fetch('/api/v1/controls?page_size=200')
+          fetch(`/api/v1/clauses?t=${Date.now()}`),
+          fetch(`/api/v1/controls?page_size=200&t=${Date.now()}`)
         ])
         const clausesData = await clausesRes.json()
         const controlsData = await controlsRes.json()
@@ -482,13 +482,15 @@ function DocumentsContent() {
   useEffect(() => {
     if (addParam) {
       setShowModal(true)
+    } else {
+      setShowModal(false)
     }
   }, [addParam])
 
   const fetchDocs = async () => {
     setLoading(true)
     try {
-      const res = await fetch('/api/v1/documents')
+      const res = await fetch(`/api/v1/documents?t=${Date.now()}`)
       const data = await res.json()
       setDocs(Array.isArray(data) ? data : [])
     } catch (e) {

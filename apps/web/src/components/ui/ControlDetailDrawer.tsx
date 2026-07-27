@@ -25,7 +25,7 @@ export default function ControlDetailDrawer({ control, onClose, onStatusUpdate }
     async function loadLinkedDocs() {
       setLoadingDocs(true)
       try {
-        const res = await fetch('/api/v1/documents')
+        const res = await fetch(`/api/v1/documents?t=${Date.now()}`)
         const data = await res.json()
         if (Array.isArray(data)) {
           const matched = data.filter((d: any) => d.controlId === control.control_id || d.controlId === `clause-${control.control_id}`)
